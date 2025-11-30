@@ -8,24 +8,31 @@
 </head>
 <body>
 
-    <div class="settings-bar" role="region" aria-label="Панель настроек">
-        <div class="settings-row settings-header">
-            <h1>Проверка глаголов</h1>
-            <span class="total-counter">Всего слов: <strong id="total-words-count">0</strong></span>
-        </div>
+    <h1 class="page-title">Проверка глаголов</h1>
 
+    <div class="settings-bar" role="region" aria-label="Панель настроек">
         <div class="settings-row settings-controls">
-            <label for="word-list">Список слов:</label>
+            <label for="word-list">Набор слов:</label>
             <select id="word-list">
                 <option value="default">100 неправильных глаголов</option>
                 <option value="extended">200 неправильных глаголов</option>
             </select>
 
-            <label for="word-count">Количество слов:</label>
+            <label for="word-count">Сколько слов проверить:</label>
             <div class="settings-input-group">
                 <input type="number" id="word-count" value="10" min="1">
+                <button type="button" class="max-btn" id="max-btn" aria-label="Выбрать максимум слов">Все</button>
                 <button id="start-btn" class="primary-btn">Начать</button>
             </div>
+        </div>
+
+        <div class="settings-row settings-footer">
+            <span class="total-counter">Всего слов: <strong id="total-words-count">0</strong></span>
+        </div>
+
+        <div class="settings-row settings-history hidden" id="last-result">
+            <span class="history-label">Последний результат:</span>
+            <span class="history-value" id="last-result-text">—</span>
         </div>
     </div>
 

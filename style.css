@@ -21,6 +21,13 @@ body {
     gap: 1.5rem;
 }
 
+.page-title {
+    margin: 0;
+    font-size: 2rem;
+    color: var(--primary);
+    text-align: center;
+}
+
 .container {
     background: var(--card-bg);
     padding: 2rem;
@@ -55,9 +62,14 @@ body {
     font-size: 1.5rem;
 }
 
-.settings-header .total-counter {
+.settings-header .total-counter,
+.settings-footer .total-counter {
     font-size: 0.95rem;
     color: #7f8c8d;
+}
+
+.settings-footer {
+    justify-content: flex-end;
 }
 
 .settings-controls {
@@ -85,6 +97,19 @@ body {
 .settings-input-group input {
     width: 90px;
     margin: 0;
+}
+
+.max-btn {
+    border: none;
+    background: #ecf0f1;
+    color: #2c3e50;
+    padding: 0.45rem 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.max-btn:hover {
+    background: #dfe6e9;
 }
 
 .settings-input-group .primary-btn {

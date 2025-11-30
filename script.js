@@ -19,7 +19,8 @@ const dom = {
         totalCount: document.getElementById('total-words-count'),
         countInput: document.getElementById('word-count'),
         btn: document.getElementById('start-btn'),
-        listSelect: document.getElementById('word-list')
+        listSelect: document.getElementById('word-list'),
+        maxBtn: document.getElementById('max-btn')
     },
     game: {
         step: document.getElementById('current-step'),
@@ -104,6 +105,10 @@ dom.game.stopBtn.addEventListener('click', finishEarly);
 dom.game.restartBtn.addEventListener('click', restartGame);
 dom.controls.listSelect.addEventListener('change', (e) => {
     loadWordList(e.target.value);
+});
+dom.controls.maxBtn.addEventListener('click', () => {
+    if (!allVerbs.length) return;
+    dom.controls.countInput.value = allVerbs.length;
 });
 
 dom.game.baseAudioBtn.addEventListener('click', () => speakVerb(dom.game.baseAudioBtn.dataset.text));
