@@ -1,0 +1,82 @@
+:root {
+    --primary: #4a90e2;
+    --bg: #f4f7f6;
+    --text: #333;
+    --card-bg: #fff;
+    --success: #2ecc71;
+    --error: #e74c3c;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+.hidden { display: none !important; }
+
+/* Typography */
+h1, h2 { margin-bottom: 1rem; color: var(--primary); }
+
+.verb-translation { font-size: 1.1rem; color: #7f8c8d; margin-bottom: 0.5rem; }
+.verb-infinitive { font-size: 2.5rem; font-weight: bold; margin-bottom: 0.2rem; }
+.verb-transcription { font-size: 1.1rem; color: #95a5a6; font-family: monospace; }
+
+/* Inputs & Buttons */
+.form-group { margin: 1.5rem 0; }
+input[type="number"], input[type="text"] {
+    padding: 10px;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    outline: none;
+}
+input[type="text"]:focus { border-color: var(--primary); }
+
+button {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    transition: transform 0.1s;
+}
+button:active { transform: scale(0.98); }
+
+.primary-btn { background-color: var(--primary); color: white; width: 100%; margin-top: 10px; }
+.secondary-btn { background-color: #34495e; color: white; width: 100%; margin-top: 15px; }
+
+/* Feedback Section */
+.feedback { margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; }
+.correct-answer-block { text-align: left; background: #f9f9f9; padding: 10px; border-radius: 8px; margin: 10px 0; }
+.answer-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
+.val { font-weight: bold; }
+.trans { font-family: monospace; color: #777; }
+
+.success-msg { color: var(--success); }
+.error-msg { color: var(--error); }
+
+/* Results */
+.score-circle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--primary);
+    margin: 20px 0;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Irregular Verbs Trainer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="start-screen" class="screen">
+            <h1>Проверка глаголов</h1>
+            <p>Всего слов в базе: <span id="total-words-count">0</span></p>
+            
+            <div class="form-group">
+                <label for="word-count">Сколько слов проверить?</label>
+                <input type="number" id="word-count" value="10" min="1">
+            </div>
+
+            <button id="start-btn" class="primary-btn">Начать тест</button>
+        </div>
+
+        <div id="game-screen" class="screen hidden">
+            <div class="progress">Слово <span id="current-step">1</span> из <span id="total-step">10</span></div>
+            
+            <div class="card">
+                <div class="verb-translation" id="verb-translation">Translation</div>
+                <div class="verb-infinitive" id="verb-base">be</div>
+                <div class="verb-transcription" id="verb-transcription-1">[biː]</div>
+            </div>
+
+            <p class="instruction">Введите Past Simple и Past Participle через пробел:</p>
+            <input type="text" id="user-input" placeholder="например: was/were been" autocomplete="off">
+            
+            <button id="check-btn" class="primary-btn">Проверить</button>
+
+            <div id="feedback" class="feedback hidden">
+                <h3 id="feedback-message"></h3>
+                
+                <div class="correct-answer-block">
+                    <div class="answer-row">
+                        <span class="label">Past Simple:</span>
+                        <span class="val" id="correct-ps">was/were</span>
+                        <span class="trans" id="trans-ps">[wɒz]</span>
+                    </div>
+                    <div class="answer-row">
+                        <span class="label">Past Participle:</span>
+                        <span class="val" id="correct-pp">been</span>
+                        <span class="trans" id="trans-pp">[biːn]</span>
+                    </div>
+                </div>
+
+                <button id="next-btn" class="secondary-btn">Дальше →</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h2>Тест завершен!</h2>
+            <div class="score-circle">
+                <span id="final-score">0</span> / <span id="final-total">0</span>
+            </div>
+            <p id="final-msg">Отличный результат!</p>
+            <button id="restart-btn" class="primary-btn">Попробовать снова</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

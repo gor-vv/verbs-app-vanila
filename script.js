@@ -1,0 +1,183 @@
+let allVerbs = [];
+let gameVerbs = [];
+let currentIndex = 0;
+let score = 0;
+
+// Ссылки на DOM элементы
+const dom = {
+    screens: {
+        start: document.getElementById('start-screen'),
+        game: document.getElementById('game-screen'),
+        result: document.getElementById('result-screen')
+    },
+    start: {
+        totalCount: document.getElementById('total-words-count'),
+        countInput: document.getElementById('word-count'),
+        btn: document.getElementById('start-btn')
+    },
+    game: {
+        step: document.getElementById('current-step'),
+        total: document.getElementById('total-step'),
+        translation: document.getElementById('verb-translation'),
+        base: document.getElementById('verb-base'),
+        transcription1: document.getElementById('verb-transcription-1'),
+        input: document.getElementById('user-input'),
+        checkBtn: document.getElementById('check-btn'),
+        
+        feedback: document.getElementById('feedback'),
+        message: document.getElementById('feedback-message'),
+        correctPs: document.getElementById('correct-ps'),
+        transPs: document.getElementById('trans-ps'),
+        correctPp: document.getElementById('correct-pp'),
+        transPp: document.getElementById('trans-pp'),
+        nextBtn: document.getElementById('next-btn')
+    },
+    result: {
+        score: document.getElementById('final-score'),
+        total: document.getElementById('final-total'),
+        msg: document.getElementById('final-msg'),
+        restartBtn: document.getElementById('restart-btn')
+    }
+};
+
+// 1. Инициализация: Загрузка JSON
+fetch('verbs.json')
+    .then(response => response.json())
+    .then(data => {
+        allVerbs = data;
+        dom.start.totalCount.textContent = allVerbs.length;
+        dom.start.countInput.max = allVerbs.length;
+    })
+    .catch(err => alert('Ошибка загрузки verbs.json: ' + err));
+
+// События
+dom.start.btn.addEventListener('click', startGame);
+dom.game.checkBtn.addEventListener('click', checkAnswer);
+dom.game.nextBtn.addEventListener('click', nextCard);
+dom.result.restartBtn.addEventListener('click', () => location.reload());
+
+// Обработка Enter в поле ввода
+dom.game.input.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        // Если кнопка "Дальше" видна, Enter нажимает её, иначе нажимает "Проверить"
+        if (!dom.game.feedback.classList.contains('hidden')) {
+            nextCard();
+        } else {
+            checkAnswer();
+        }
+    }
+});
+
+// --- ЛОГИКА ---
+
+function startGame() {
+    const count = parseInt(dom.start.countInput.value);
+    if (!count || count <= 0) return;
+
+    // Перемешиваем и берем N слов
+    gameVerbs = shuffleArray([...allVerbs]).slice(0, count);
+    
+    // Сброс состояния
+    currentIndex = 0;
+    score = 0;
+    
+    // UI переключение
+    switchScreen('game');
+    dom.game.total.textContent = gameVerbs.length;
+    showCard();
+}
+
+function showCard() {
+    const verb = gameVerbs[currentIndex];
+    
+    // Заполнение карточки данными из JSON
+    dom.game.translation.textContent = verb["Translation"];
+    dom.game.base.textContent = verb["Base form"];
+    dom.game.transcription1.textContent = verb["Transcription 1"];
+    
+    // Сброс инпутов и фидбека
+    dom.game.input.value = '';
+    dom.game.feedback.classList.add('hidden');
+    dom.game.checkBtn.classList.remove('hidden'); // Показываем кнопку проверки
+    dom.game.input.disabled = false;
+    dom.game.input.focus();
+    
+    dom.game.step.textContent = currentIndex + 1;
+}
+
+function checkAnswer() {
+    const verb = gameVerbs[currentIndex];
+    const userText = dom.game.input.value.trim().toLowerCase().replace(/\s+/g, ' '); // убираем лишние пробелы
+    
+    // Формируем правильную строку для сверки
+    // JSON ключи: "Past Simple form" и "Past Participle form"
+    const correctSimple = verb["Past Simple form"];
+    const correctParticiple = verb["Past Participle form"];
+    
+    // Ожидаемый ответ: "форма2 форма3"
+    const correctAnswerString = `${correctSimple} ${correctParticiple}`.toLowerCase();
+    
+    // Проверка (сравниваем строки)
+    // Вариант со строгим сравнением. 
+    // Для "was/were" пользователь должен ввести именно "was/were been" или можно упростить логику,
+    // но пока сравниваем "в лоб", как в JSON.
+    const isCorrect = (userText === correctAnswerString);
+
+    if (isCorrect) score++;
+
+    // Показываем результат
+    showFeedback(isCorrect, verb);
+}
+
+function showFeedback(isCorrect, verb) {
+    dom.game.message.textContent = isCorrect ? "Правильно! 🎉" : "Ошибка 😞";
+    dom.game.message.className = isCorrect ? "success-msg" : "error-msg";
+    
+    // Заполняем правильные ответы и транскрипции из JSON
+    dom.game.correctPs.textContent = verb["Past Simple form"];
+    dom.game.transPs.textContent = verb["Transcription 2"];
+    
+    dom.game.correctPp.textContent = verb["Past Participle form"];
+    dom.game.transPp.textContent = verb["Transcription 3"];
+    
+    // UI изменения
+    dom.game.feedback.classList.remove('hidden');
+    dom.game.checkBtn.classList.add('hidden'); // Прячем кнопку проверки
+    dom.game.input.disabled = true;
+    dom.game.nextBtn.focus();
+}
+
+function nextCard() {
+    currentIndex++;
+    if (currentIndex < gameVerbs.length) {
+        showCard();
+    } else {
+        endGame();
+    }
+}
+
+function endGame() {
+    switchScreen('result');
+    dom.result.score.textContent = score;
+    dom.result.total.textContent = gameVerbs.length;
+    
+    // Мотивирующее сообщение
+    const percentage = score / gameVerbs.length;
+    if (percentage === 1) dom.result.msg.textContent = "Идеально! Вы мастер! 🏆";
+    else if (percentage >= 0.7) dom.result.msg.textContent = "Хороший результат! 💪";
+    else dom.result.msg.textContent = "Нужно еще потренироваться 📚";
+}
+
+// Утилиты
+function switchScreen(screenName) {
+    Object.values(dom.screens).forEach(el => el.classList.add('hidden'));
+    dom.screens[screenName].classList.remove('hidden');
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
