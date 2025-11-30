@@ -22,11 +22,15 @@
         </div>
 
         <div id="game-screen" class="screen hidden">
+            <button type="button" class="close-card-btn" id="stop-btn" aria-label="Завершить тренировку">✕</button>
             <div class="progress">Слово <span id="current-step">1</span> из <span id="total-step">10</span></div>
             
             <div class="card">
                 <div class="verb-translation" id="verb-translation">Translation</div>
-                <div class="verb-infinitive" id="verb-base">be</div>
+                <div class="verb-infinitive-row">
+                    <div class="verb-infinitive" id="verb-base">be</div>
+                    <button type="button" class="audio-btn" id="base-audio-btn" aria-label="Озвучить инфинитив">🔊</button>
+                </div>
                 <div class="verb-transcription" id="verb-transcription-1">[biː]</div>
             </div>
 
@@ -42,11 +46,13 @@
                     <div class="answer-row">
                         <span class="label">Past Simple:</span>
                         <span class="val" id="correct-ps">was/were</span>
+                        <button type="button" class="audio-btn" id="ps-audio-btn" aria-label="Озвучить Past Simple">🔊</button>
                         <span class="trans" id="trans-ps">[wɒz]</span>
                     </div>
                     <div class="answer-row">
                         <span class="label">Past Participle:</span>
                         <span class="val" id="correct-pp">been</span>
+                        <button type="button" class="audio-btn" id="pp-audio-btn" aria-label="Озвучить Past Participle">🔊</button>
                         <span class="trans" id="trans-pp">[biːn]</span>
                     </div>
                 </div>

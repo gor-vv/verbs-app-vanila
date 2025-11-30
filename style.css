@@ -28,14 +28,54 @@ body {
     text-align: center;
 }
 
+.screen { position: relative; }
+
 .hidden { display: none !important; }
 
 /* Typography */
 h1, h2 { margin-bottom: 1rem; color: var(--primary); }
 
+.card { position: relative; padding-top: 1.5rem; }
 .verb-translation { font-size: 1.1rem; color: #7f8c8d; margin-bottom: 0.5rem; }
+.verb-infinitive-row { display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
 .verb-infinitive { font-size: 2.5rem; font-weight: bold; margin-bottom: 0.2rem; }
 .verb-transcription { font-size: 1.1rem; color: #95a5a6; font-family: monospace; }
+
+.answer-row { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+.answer-row .val { font-weight: 600; }
+
+.audio-btn {
+    border: none;
+    background: #d0d6d6e4;
+    color: #fff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+.audio-btn:focus-visible { outline: 3px solid rgba(52, 152, 219, 0.5); }
+
+.audio-btn:hover { transform: scale(1.05); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+
+.close-card-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: transparent;
+    color: var(--error);
+    font-size: 1.2rem;
+    line-height: 1;
+    padding: 0.2rem;
+}
+
+.close-card-btn:hover { color: #c0392b; }
 
 /* Inputs & Buttons */
 .form-group { margin: 1.5rem 0; }

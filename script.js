@@ -20,6 +20,7 @@ const dom = {
         total: document.getElementById('total-step'),
         translation: document.getElementById('verb-translation'),
         base: document.getElementById('verb-base'),
+        baseAudioBtn: document.getElementById('base-audio-btn'),
         transcription1: document.getElementById('verb-transcription-1'),
         input: document.getElementById('user-input'),
         checkBtn: document.getElementById('check-btn'),
@@ -27,10 +28,13 @@ const dom = {
         feedback: document.getElementById('feedback'),
         message: document.getElementById('feedback-message'),
         correctPs: document.getElementById('correct-ps'),
+        psAudioBtn: document.getElementById('ps-audio-btn'),
         transPs: document.getElementById('trans-ps'),
         correctPp: document.getElementById('correct-pp'),
+        ppAudioBtn: document.getElementById('pp-audio-btn'),
         transPp: document.getElementById('trans-pp'),
-        nextBtn: document.getElementById('next-btn')
+        nextBtn: document.getElementById('next-btn'),
+        stopBtn: document.getElementById('stop-btn')
     },
     result: {
         score: document.getElementById('final-score'),
@@ -39,6 +43,27 @@ const dom = {
         restartBtn: document.getElementById('restart-btn')
     }
 };
+
+function setAudioData(verb) {
+    dom.game.baseAudioBtn.dataset.text = verb["Base form"] || '';
+    dom.game.psAudioBtn.dataset.text = verb["Past Simple form"] || '';
+    dom.game.ppAudioBtn.dataset.text = verb["Past Participle form"] || '';
+}
+
+function speakVerb(text) {
+    if (!text) return;
+    const cleaned = text
+        .replace(/\[[^\]]*\]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim();
+
+    if (!cleaned) return;
+
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(cleaned);
+    utterance.lang = 'en-US';
+    window.speechSynthesis.speak(utterance);
+}
 
 // 1. Инициализация: Загрузка JSON
 fetch('verbs.json')
@@ -55,6 +80,11 @@ dom.start.btn.addEventListener('click', startGame);
 dom.game.checkBtn.addEventListener('click', checkAnswer);
 dom.game.nextBtn.addEventListener('click', nextCard);
 dom.result.restartBtn.addEventListener('click', () => location.reload());
+dom.game.stopBtn.addEventListener('click', finishEarly);
+
+dom.game.baseAudioBtn.addEventListener('click', () => speakVerb(dom.game.baseAudioBtn.dataset.text));
+dom.game.psAudioBtn.addEventListener('click', () => speakVerb(dom.game.psAudioBtn.dataset.text));
+dom.game.ppAudioBtn.addEventListener('click', () => speakVerb(dom.game.ppAudioBtn.dataset.text));
 
 // Обработка Enter в поле ввода
 dom.game.input.addEventListener('keypress', function (e) {
@@ -94,6 +124,7 @@ function showCard() {
     dom.game.translation.textContent = verb["Translation"];
     dom.game.base.textContent = verb["Base form"];
     dom.game.transcription1.textContent = verb["Transcription 1"];
+    setAudioData(verb);
     
     // Сброс инпутов и фидбека
     dom.game.input.value = '';
@@ -139,6 +170,7 @@ function showFeedback(isCorrect, verb) {
     
     dom.game.correctPp.textContent = verb["Past Participle form"];
     dom.game.transPp.textContent = verb["Transcription 3"];
+    setAudioData(verb);
     
     // UI изменения
     dom.game.feedback.classList.remove('hidden');
@@ -154,6 +186,11 @@ function nextCard() {
     } else {
         endGame();
     }
+}
+
+function finishEarly() {
+    if (!gameVerbs.length) return;
+    endGame();
 }
 
 function endGame() {
