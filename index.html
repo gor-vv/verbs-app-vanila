@@ -8,6 +8,17 @@
 </head>
 <body>
 
+    <div class="menu-wrapper">
+        <button type="button" class="menu-btn" id="menu-btn" aria-haspopup="true" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="menu-dropdown hidden" id="menu-dropdown" role="menu">
+            <button type="button" class="menu-item" id="menu-history" role="menuitem">История</button>
+        </div>
+    </div>
+
     <h1 class="page-title">Проверка глаголов</h1>
 
     <div class="settings-bar" role="region" aria-label="Панель настроек">
@@ -29,11 +40,6 @@
         <div class="settings-row settings-footer">
             <span class="total-counter">Всего слов: <strong id="total-words-count">0</strong></span>
         </div>
-
-        <div class="settings-row settings-history hidden" id="last-result">
-            <span class="history-label">Последний результат:</span>
-            <span class="history-value" id="last-result-text">—</span>
-        </div>
     </div>
 
     <div class="container hidden" id="main-content">
@@ -53,7 +59,7 @@
                 <div class="verb-transcription" id="verb-transcription-1">[biː]</div>
             </div>
 
-            <p class="instruction">Введите Past Simple и Past Participle через пробел:</p>
+            <p class="instruction">Введите две формы через пробел:</p>
             <input type="text" id="user-input" placeholder="например: was/were been" autocomplete="off">
             
             <button id="check-btn" class="primary-btn">Проверить</button>
@@ -89,6 +95,24 @@
             <button id="restart-btn" class="primary-btn">Попробовать снова</button>
         </div>
     </div>
+
+    <div class="history-modal hidden" id="history-modal" role="dialog" aria-modal="true" aria-labelledby="history-title">
+        <div class="history-dialog">
+            <div class="history-dialog-header">
+                <h2 id="history-title">История результатов</h2>
+                <button type="button" class="history-close" id="history-close" aria-label="Закрыть">✕</button>
+            </div>
+            <div class="history-dialog-body">
+                <ul class="history-list" id="history-list">
+                    <li class="history-empty">Пока нет сохранённых результатов.</li>
+                </ul>
+            </div>
+            <div class="history-dialog-footer">
+                <button type="button" class="history-clear-btn" id="history-clear">Очистить</button>
+            </div>
+        </div>
+    </div>
+    <div class="history-backdrop hidden" id="history-backdrop"></div>
 
     <script src="script.js"></script>
 </body>

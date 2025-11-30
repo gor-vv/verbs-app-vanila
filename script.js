@@ -3,11 +3,143 @@ let gameVerbs = [];
 let currentIndex = 0;
 let score = 0;
 
+const STORAGE_KEY = 'irregularTrainer:results';
+
 // Ссылки на DOM элементы
 const WORD_LISTS = {
     default: { file: 'verbs100.json' },
     extended: { file: 'verbs200.json' }
 };
+
+function clearHistory() {
+    localStorage.removeItem(STORAGE_KEY);
+    renderHistoryList();
+}
+
+function getListLabel(key) {
+    const option = dom?.controls?.listSelect
+        ? Array.from(dom.controls.listSelect.options).find(opt => opt.value === key)
+        : null;
+    return option ? option.textContent : key;
+}
+
+function getStoredResults() {
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return [];
+        const data = JSON.parse(raw);
+        return Array.isArray(data) ? data : [];
+    } catch (err) {
+        console.warn('Не удалось прочитать результаты из localStorage', err);
+        return [];
+    }
+}
+
+function saveResultRecord(record) {
+    try {
+        const results = getStoredResults();
+        results.push(record);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(results));
+    } catch (err) {
+        console.warn('Не удалось сохранить результат', err);
+    }
+    renderHistoryList();
+}
+
+function renderHistoryList() {
+    if (!dom.history.list) return;
+    const results = getStoredResults().slice().reverse();
+    dom.history.list.innerHTML = '';
+    if (!results.length) {
+        const empty = document.createElement('li');
+        empty.className = 'history-empty';
+        empty.textContent = 'Пока нет сохранённых результатов.';
+        dom.history.list.appendChild(empty);
+        return;
+    }
+    results.forEach((res, idx) => {
+        const item = document.createElement('li');
+        item.className = 'history-item';
+
+        const left = document.createElement('span');
+        left.textContent = `${res.score}/${res.total}`;
+
+        const right = document.createElement('small');
+        const date = res.timestamp ? new Date(res.timestamp).toLocaleString('ru-RU') : '';
+        const listLabel = res.listLabel || getListLabel(res.list);
+        right.textContent = `${listLabel}${date ? ' · ' + date : ''}`;
+
+        item.append(left, right);
+        dom.history.list.appendChild(item);
+    });
+}
+
+function setupMenu() {
+    if (!dom.menu.btn || !dom.menu.dropdown) return;
+
+    const closeMenu = () => {
+        dom.menu.dropdown.classList.add('hidden');
+        dom.menu.btn.setAttribute('aria-expanded', 'false');
+        document.removeEventListener('click', handleOutsideClick, true);
+    };
+
+    const openMenu = () => {
+        dom.menu.dropdown.classList.remove('hidden');
+        dom.menu.btn.setAttribute('aria-expanded', 'true');
+        document.addEventListener('click', handleOutsideClick, true);
+    };
+
+    const handleOutsideClick = (event) => {
+        if (!dom.menu.dropdown.contains(event.target) && !dom.menu.btn.contains(event.target)) {
+            closeMenu();
+        }
+    };
+
+    dom.menu.btn.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (dom.menu.dropdown.classList.contains('hidden')) openMenu();
+        else closeMenu();
+    });
+
+    dom.menu.close = closeMenu;
+}
+
+function setupHistoryModal() {
+    if (!dom.history.toggle || !dom.history.modal) return;
+
+    const openModal = () => {
+        dom.history.modal.classList.remove('hidden');
+        dom.history.backdrop?.classList.remove('hidden');
+        renderHistoryList();
+    };
+
+    const closeModal = () => {
+        dom.history.modal.classList.add('hidden');
+        dom.history.backdrop?.classList.add('hidden');
+    };
+
+    dom.history.toggle.addEventListener('click', () => {
+        dom.menu.close?.();
+        openModal();
+    });
+
+    dom.history.close?.addEventListener('click', closeModal);
+    dom.history.backdrop?.addEventListener('click', closeModal);
+    dom.history.modal.addEventListener('click', (event) => {
+        if (!dom.history.dialog?.contains(event.target)) {
+            closeModal();
+        }
+    });
+    dom.history.clearBtn?.addEventListener('click', () => {
+        clearHistory();
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !dom.history.modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+}
 
 const dom = {
     container: document.getElementById('main-content'),
@@ -21,6 +153,19 @@ const dom = {
         btn: document.getElementById('start-btn'),
         listSelect: document.getElementById('word-list'),
         maxBtn: document.getElementById('max-btn')
+    },
+    history: {
+        toggle: document.getElementById('menu-history'),
+        modal: document.getElementById('history-modal'),
+        close: document.getElementById('history-close'),
+        backdrop: document.getElementById('history-backdrop'),
+        dialog: document.querySelector('.history-dialog'),
+        list: document.getElementById('history-list'),
+        clearBtn: document.getElementById('history-clear')
+    },
+    menu: {
+        btn: document.getElementById('menu-btn'),
+        dropdown: document.getElementById('menu-dropdown')
     },
     game: {
         step: document.getElementById('current-step'),
@@ -95,6 +240,7 @@ function speakVerb(text) {
 
 // 1. Инициализация: Загрузка выбранного списка
 loadWordList(dom.controls.listSelect.value);
+renderHistoryList();
 
 // События
 dom.controls.btn.addEventListener('click', startGame);
@@ -110,6 +256,8 @@ dom.controls.maxBtn.addEventListener('click', () => {
     if (!allVerbs.length) return;
     dom.controls.countInput.value = allVerbs.length;
 });
+setupMenu();
+setupHistoryModal();
 
 dom.game.baseAudioBtn.addEventListener('click', () => speakVerb(dom.game.baseAudioBtn.dataset.text));
 dom.game.psAudioBtn.addEventListener('click', () => speakVerb(dom.game.psAudioBtn.dataset.text));
@@ -249,6 +397,14 @@ function endGame() {
     if (percentage === 1) dom.result.msg.textContent = "Идеально! Вы мастер! 🏆";
     else if (percentage >= 0.7) dom.result.msg.textContent = "Хороший результат! 💪";
     else dom.result.msg.textContent = "Нужно еще потренироваться 📚";
+
+    saveResultRecord({
+        score,
+        total: gameVerbs.length,
+        list: dom.controls.listSelect.value,
+        listLabel: getListLabel(dom.controls.listSelect.value),
+        timestamp: Date.now()
+    });
 }
 
 // Утилиты

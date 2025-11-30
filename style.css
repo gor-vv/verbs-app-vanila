@@ -7,6 +7,147 @@
     --error: #e74c3c;
 }
 
+.menu-wrapper {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1000;
+}
+
+.menu-btn {
+    width: 48px;
+    height: 40px;
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    padding: 0.4rem;
+}
+
+.menu-btn span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: #2c3e50;
+    border-radius: 999px;
+}
+
+.menu-dropdown {
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    background: var(--card-bg);
+    border: 1px solid #d0d7de;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    min-width: 180px;
+    padding: 0.35rem 0;
+    z-index: 1000;
+}
+
+.menu-item {
+    width: 100%;
+    text-align: left;
+    padding: 0.6rem 1rem;
+    border: none;
+    background: transparent;
+    font-size: 0.95rem;
+}
+
+.menu-item:hover {
+    background: #f0f4f8;
+}
+
+
+.history-backdrop,
+.history-modal {
+    position: fixed;
+    inset: 0;
+}
+
+.history-backdrop { z-index: 1500; }
+.history-modal { z-index: 1600; }
+
+.history-backdrop {
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.history-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.history-dialog {
+    background: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    max-width: 420px;
+    width: calc(100% - 2rem);
+    max-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.history-dialog-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #edf1f5;
+}
+
+.history-dialog-body {
+    padding: 1rem 1.25rem;
+    overflow-y: auto;
+}
+
+.history-dialog-footer {
+    padding: 0.85rem 1.25rem;
+    border-top: 1px solid #edf1f5;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.history-clear-btn {
+    border: none;
+    background: #f8d7da;
+    color: #c0392b;
+    padding: 0.45rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.history-close {
+    border: none;
+    background: transparent;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+}
+
+.history-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.history-item span { font-weight: 600; }
+.history-item small { color: #7f8c8d; }
+.history-empty { color: #95a5a6; text-align: center; }
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg);
@@ -158,8 +299,41 @@ h1, h2 { margin-bottom: 1rem; color: var(--primary); }
 .verb-infinitive { font-size: 2.5rem; font-weight: bold; margin-bottom: 0.2rem; }
 .verb-transcription { font-size: 1.1rem; color: #95a5a6; font-family: monospace; }
 
-.answer-row { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
-.answer-row .val { font-weight: 600; }
+.correct-answer-block {
+    display: grid;
+    grid-template-columns: 150px 180px 40px 1fr;
+    column-gap: 0.5rem;
+    row-gap: 0.4rem;
+    align-items: center;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.answer-row {
+    display: contents;
+}
+
+.answer-row .label {
+    font-weight: 600;
+    justify-self: start;
+}
+
+.answer-row .val {
+    font-weight: 600;
+}
+
+.answer-row .audio-btn {
+    justify-self: center;
+}
+
+.answer-row .trans {
+    font-family: monospace;
+    color: #777;
+}
+
 
 .audio-btn {
     border: none;
@@ -222,8 +396,6 @@ button:active { transform: scale(0.98); }
 
 /* Feedback Section */
 .feedback { margin-top: 20px; padding-top: 20px; border-top: 1px solid #eee; }
-.correct-answer-block { text-align: left; background: #f9f9f9; padding: 10px; border-radius: 8px; margin: 10px 0; }
-.answer-row { display: flex; justify-content: space-between; margin-bottom: 5px; }
 .val { font-weight: bold; }
 .trans { font-family: monospace; color: #777; }
 
