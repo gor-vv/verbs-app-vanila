@@ -1,0 +1,1721 @@
+[
+  {
+    "Translation": "держать пари, биться об заклад",
+    "Base form": "bet",
+    "Transcription 1": "[bet]",
+    "Past Simple form": "bet",
+    "Transcription 2": "[bet]",
+    "Past Participle form": "bet",
+    "Transcription 3": "[bet]"
+  },
+  {
+    "Translation": "резать",
+    "Base form": "cut",
+    "Transcription 1": "[kʌt]",
+    "Past Simple form": "cut",
+    "Transcription 2": "[kʌt]",
+    "Past Participle form": "cut",
+    "Transcription 3": "[kʌt]"
+  },
+  {
+    "Translation": "кидать; бросать; проводить кастинг",
+    "Base form": "cast",
+    "Transcription 1": "[kɑ:st]",
+    "Past Simple form": "cast",
+    "Transcription 2": "[kɑ:st]",
+    "Past Participle form": "cast",
+    "Transcription 3": "[kɑ:st]"
+  },
+  {
+    "Translation": "передавать по радио, вещать",
+    "Base form": "broadcast",
+    "Transcription 1": "[brɔ:dkɑ:st]",
+    "Past Simple form": "broadcast",
+    "Transcription 2": "[brɔ:dkɑ:st]",
+    "Past Participle form": "broadcast",
+    "Transcription 3": "[brɔ:dkɑ:st]"
+  },
+  {
+    "Translation": "предсказывать, прогнозировать",
+    "Base form": "forecast",
+    "Transcription 1": "[ˈfɔːkɑːst]",
+    "Past Simple form": "forecast",
+    "Transcription 2": "[ˈfɔːkɑːst]",
+    "Past Participle form": "forecast",
+    "Transcription 3": "[ˈfɔːkɑːst]"
+  },
+  {
+    "Translation": "стоить",
+    "Base form": "cost",
+    "Transcription 1": "[kɔst]",
+    "Past Simple form": "cost",
+    "Transcription 2": "[kɔst]",
+    "Past Participle form": "cost",
+    "Transcription 3": "[kɔst]"
+  },
+  {
+    "Translation": "причинить боль",
+    "Base form": "hurt",
+    "Transcription 1": "[hə:t]",
+    "Past Simple form": "hurt",
+    "Transcription 2": "[hə:t]",
+    "Past Participle form": "hurt",
+    "Transcription 3": "[hə:t]"
+  },
+  {
+    "Translation": "ударить",
+    "Base form": "hit",
+    "Transcription 1": "[hit]",
+    "Past Simple form": "hit",
+    "Transcription 2": "[hit]",
+    "Past Participle form": "hit",
+    "Transcription 3": "[hit]"
+  },
+  {
+    "Translation": "промахнуться",
+    "Base form": "mishit",
+    "Transcription 1": "[mis’hit]",
+    "Past Simple form": "mishit",
+    "Transcription 2": "[mis’hit]",
+    "Past Participle form": "mishit",
+    "Transcription 3": "[mis’hit]"
+  },
+  {
+    "Translation": "подходить по размеру, приспосабливать",
+    "Base form": "fit",
+    "Transcription 1": "[fit]",
+    "Past Simple form": "fit",
+    "Transcription 2": "[fit]",
+    "Past Participle form": "fit",
+    "Transcription 3": "[fit]"
+  },
+  {
+    "Translation": "вязать",
+    "Base form": "knit",
+    "Transcription 1": "[nit]",
+    "Past Simple form": "knit",
+    "Transcription 2": "[nit]",
+    "Past Participle form": "knit",
+    "Transcription 3": "[nit]"
+  },
+  {
+    "Translation": "позволять",
+    "Base form": "let",
+    "Transcription 1": "[let]",
+    "Past Simple form": "let",
+    "Transcription 2": "[let]",
+    "Past Participle form": "let",
+    "Transcription 3": "[let]"
+  },
+  {
+    "Translation": "класть",
+    "Base form": "put",
+    "Transcription 1": "[put]",
+    "Past Simple form": "put",
+    "Transcription 2": "[put]",
+    "Past Participle form": "put",
+    "Transcription 3": "[put]"
+  },
+  {
+    "Translation": "выводить, выпускать",
+    "Base form": "output",
+    "Transcription 1": "[ˈautput]",
+    "Past Simple form": "output",
+    "Transcription 2": "[ˈautput]",
+    "Past Participle form": "output",
+    "Transcription 3": "[ˈautput]"
+  },
+  {
+    "Translation": "вводить (данные)",
+    "Base form": "input",
+    "Transcription 1": "[ˈinput]",
+    "Past Simple form": "input",
+    "Transcription 2": "[ˈinput]",
+    "Past Participle form": "input",
+    "Transcription 3": "[ˈinput]"
+  },
+  {
+    "Translation": "покидать; оставлять; выходить",
+    "Base form": "quit",
+    "Transcription 1": "[kwit]",
+    "Past Simple form": "quit",
+    "Transcription 2": "[kwit]",
+    "Past Participle form": "quit",
+    "Transcription 3": "[kwit]"
+  },
+  {
+    "Translation": "читать",
+    "Base form": "read",
+    "Transcription 1": "[riːd]",
+    "Past Simple form": "read",
+    "Transcription 2": "[red]",
+    "Past Participle form": "read",
+    "Transcription 3": "[red]"
+  },
+  {
+    "Translation": "перечитывать",
+    "Base form": "reread",
+    "Transcription 1": "[ˌriːˈriːd]",
+    "Past Simple form": "reread",
+    "Transcription 2": "[ˌriːˈred]",
+    "Past Participle form": "reread",
+    "Transcription 3": "[ˌriːˈred]"
+  },
+  {
+    "Translation": "неправильно истолковывать",
+    "Base form": "misread",
+    "Transcription 1": "[ˌmisˈriːd]",
+    "Past Simple form": "misread",
+    "Transcription 2": "[ˌmisˈred]",
+    "Past Participle form": "misread",
+    "Transcription 3": "[ˌmisˈred]"
+  },
+  {
+    "Translation": "помещать, ставить, установить",
+    "Base form": "set",
+    "Transcription 1": "[set]",
+    "Past Simple form": "set",
+    "Transcription 2": "[set]",
+    "Past Participle form": "set",
+    "Transcription 3": "[set]"
+  },
+  {
+    "Translation": "расстраивать, огорчать",
+    "Base form": "upset",
+    "Transcription 1": "[ˌʌpˈset]",
+    "Past Simple form": "upset",
+    "Transcription 2": "[ˌʌpˈset]",
+    "Past Participle form": "upset",
+    "Transcription 3": "[ˌʌpˈset]"
+  },
+  {
+    "Translation": "возмещать, компенсировать",
+    "Base form": "offset",
+    "Transcription 1": "[ˌɔfˈset]",
+    "Past Simple form": "offset",
+    "Transcription 2": "[ˌɔfˈset]",
+    "Past Participle form": "offset",
+    "Transcription 3": "[ˌɔfˈset]"
+  },
+  {
+    "Translation": "устанавливать заново",
+    "Base form": "reset",
+    "Transcription 1": "[ˌriːˈset]",
+    "Past Simple form": "reset",
+    "Transcription 2": "[ˌriːˈset]",
+    "Past Participle form": "reset",
+    "Transcription 3": "[ˌriːˈset]"
+  },
+  {
+    "Translation": "распространять",
+    "Base form": "spread",
+    "Transcription 1": "[spred]",
+    "Past Simple form": "spread",
+    "Transcription 2": "[spred]",
+    "Past Participle form": "spread",
+    "Transcription 3": "[spred]"
+  },
+  {
+    "Translation": "расщеплять; разделять",
+    "Base form": "split",
+    "Transcription 1": "[split]",
+    "Past Simple form": "split",
+    "Transcription 2": "[split]",
+    "Past Participle form": "split",
+    "Transcription 3": "[split]"
+  },
+  {
+    "Translation": "закрывать",
+    "Base form": "shut",
+    "Transcription 1": "[ʃʌt]",
+    "Past Simple form": "shut",
+    "Transcription 2": "[ʃʌt]",
+    "Past Participle form": "shut",
+    "Transcription 3": "[ʃʌt]"
+  },
+  {
+    "Translation": "комсать; разполосывать; измельчать",
+    "Base form": "shred",
+    "Transcription 1": "[ʃred]",
+    "Past Simple form": "shred",
+    "Transcription 2": "[ʃred]",
+    "Past Participle form": "shred",
+    "Transcription 3": "[ʃred]"
+  },
+  {
+    "Translation": "выходить замуж, жениться",
+    "Base form": "wed",
+    "Transcription 1": "[wed]",
+    "Past Simple form": "wed",
+    "Transcription 2": "[wed]",
+    "Past Participle form": "wed",
+    "Transcription 3": "[wed]"
+  },
+  {
+    "Translation": "мочить; увлажнять",
+    "Base form": "wet",
+    "Transcription 1": "[wet]",
+    "Past Simple form": "wet",
+    "Transcription 2": "[wet]",
+    "Past Participle form": "wet",
+    "Transcription 3": "[wet]"
+  },
+  {
+    "Translation": "начинать",
+    "Base form": "begin",
+    "Transcription 1": "[bɪ'ɡɪn]",
+    "Past Simple form": "began",
+    "Transcription 2": "[bɪ'ɡæn]",
+    "Past Participle form": "begun",
+    "Transcription 3": "[bɪ'ɡʌn]"
+  },
+  {
+    "Translation": "пить",
+    "Base form": "drink",
+    "Transcription 1": "[drɪŋk]",
+    "Past Simple form": "drank",
+    "Transcription 2": "[dræŋk]",
+    "Past Participle form": "drunk",
+    "Transcription 3": "[drʌŋk]"
+  },
+  {
+    "Translation": "звенеть; звучать; звонить",
+    "Base form": "ring",
+    "Transcription 1": "[rɪŋ]",
+    "Past Simple form": "rang",
+    "Transcription 2": "[ræŋ]",
+    "Past Participle form": "rung",
+    "Transcription 3": "[rʌŋ]"
+  },
+  {
+    "Translation": "плавать",
+    "Base form": "swim",
+    "Transcription 1": "[swɪm]",
+    "Past Simple form": "swam",
+    "Transcription 2": "[swæm]",
+    "Past Participle form": "swum",
+    "Transcription 3": "[swʌm]"
+  },
+  {
+    "Translation": "петь",
+    "Base form": "sing",
+    "Transcription 1": "[sɪŋ]",
+    "Past Simple form": "sang",
+    "Transcription 2": "[sæŋ]",
+    "Past Participle form": "sung",
+    "Transcription 3": "[sʌŋ]"
+  },
+  {
+    "Translation": "вскочить; возникнуть",
+    "Base form": "spring",
+    "Transcription 1": "[sprɪŋ]",
+    "Past Simple form": "sprang",
+    "Transcription 2": "[spræŋ]",
+    "Past Participle form": "sprung",
+    "Transcription 3": "[sprʌŋ]"
+  },
+  {
+    "Translation": "погружаться; тонуть; опускаться",
+    "Base form": "sink",
+    "Transcription 1": "[sɪŋk]",
+    "Past Simple form": "sank",
+    "Transcription 2": "[sæŋk]",
+    "Past Participle form": "sunk",
+    "Transcription 3": "[sʌŋk]"
+  },
+  {
+    "Translation": "кровоточить",
+    "Base form": "bleed",
+    "Transcription 1": "[bliːd]",
+    "Past Simple form": "bled",
+    "Transcription 2": "[bled]",
+    "Past Participle form": "bled",
+    "Transcription 3": "[bled]"
+  },
+  {
+    "Translation": "выращивать",
+    "Base form": "breed",
+    "Transcription 1": "[briːd]",
+    "Past Simple form": "bred",
+    "Transcription 2": "[bred]",
+    "Past Participle form": "bred",
+    "Transcription 3": "[bred]"
+  },
+  {
+    "Translation": "карабкаться; взбираться",
+    "Base form": "climb",
+    "Transcription 1": "[klaɪm]",
+    "Past Simple form": "clumb",
+    "Transcription 2": "[klʌm]",
+    "Past Participle form": "clumb",
+    "Transcription 3": "[klʌm]"
+  },
+  {
+    "Translation": "цепляться; прилипать",
+    "Base form": "cling",
+    "Transcription 1": "[klɪŋ]",
+    "Past Simple form": "clung",
+    "Transcription 2": "[klʌŋ]",
+    "Past Participle form": "clung",
+    "Transcription 3": "[klʌŋ]"
+  },
+  {
+    "Translation": "копать, рыть",
+    "Base form": "dig",
+    "Transcription 1": "[dɪg]",
+    "Past Simple form": "dug",
+    "Transcription 2": "[dʌg]",
+    "Past Participle form": "dug",
+    "Transcription 3": "[dʌg]"
+  },
+  {
+    "Translation": "кормить",
+    "Base form": "feed",
+    "Transcription 1": "[fiːd]",
+    "Past Simple form": "fed",
+    "Transcription 2": "[fed]",
+    "Past Participle form": "fed",
+    "Transcription 3": "[fed]"
+  },
+  {
+    "Translation": "сражаться",
+    "Base form": "fight",
+    "Transcription 1": "[faɪt]",
+    "Past Simple form": "fought",
+    "Transcription 2": "[fɔːt]",
+    "Past Participle form": "fought",
+    "Transcription 3": "[fɔːt]"
+  },
+  {
+    "Translation": "находить",
+    "Base form": "find",
+    "Transcription 1": "[faɪnd]",
+    "Past Simple form": "found",
+    "Transcription 2": "[faʊnd]",
+    "Past Participle form": "found",
+    "Transcription 3": "[faʊnd]"
+  },
+  {
+    "Translation": "получать; становиться; добираться",
+    "Base form": "get",
+    "Transcription 1": "[get]",
+    "Past Simple form": "got",
+    "Transcription 2": "[gɒt]",
+    "Past Participle form": "got",
+    "Transcription 3": "[gɒt]"
+  },
+  {
+    "Translation": "молоть",
+    "Base form": "grind",
+    "Transcription 1": "[graɪnd]",
+    "Past Simple form": "ground",
+    "Transcription 2": "[graʊnd]",
+    "Past Participle form": "ground",
+    "Transcription 3": "[graʊnd]"
+  },
+  {
+    "Translation": "вешать; висеть",
+    "Base form": "hang",
+    "Transcription 1": "[hæŋ]",
+    "Past Simple form": "hung",
+    "Transcription 2": "[hʌŋ]",
+    "Past Participle form": "hung",
+    "Transcription 3": "[hʌŋ]"
+  },
+  {
+    "Translation": "держать",
+    "Base form": "hold",
+    "Transcription 1": "[həʊld]",
+    "Past Simple form": "held",
+    "Transcription 2": "[held]",
+    "Past Participle form": "held",
+    "Transcription 3": "[held]"
+  },
+  {
+    "Translation": "смотреть, созерцать",
+    "Base form": "behold",
+    "Transcription 1": "[bɪ'həʊld]",
+    "Past Simple form": "beheld",
+    "Transcription 2": "[bɪ'held]",
+    "Past Participle form": "beheld",
+    "Transcription 3": "[bɪ'held]"
+  },
+  {
+    "Translation": "зажигать; освещать",
+    "Base form": "light",
+    "Transcription 1": "[laɪt]",
+    "Past Simple form": "lit",
+    "Transcription 2": "[lɪt]",
+    "Past Participle form": "lit",
+    "Transcription 3": "[lɪt]"
+  },
+  {
+    "Translation": "вести",
+    "Base form": "lead",
+    "Transcription 1": "[liːd]",
+    "Past Simple form": "led",
+    "Transcription 2": "[led]",
+    "Past Participle form": "led",
+    "Transcription 3": "[led]"
+  },
+  {
+    "Translation": "ввести в заблуждение",
+    "Base form": "mislead",
+    "Transcription 1": "[mɪs'liːd]",
+    "Past Simple form": "misled",
+    "Transcription 2": "[mɪs'led]",
+    "Past Participle form": "misled",
+    "Transcription 3": "[mɪs'led]"
+  },
+  {
+    "Translation": "встречать",
+    "Base form": "meet",
+    "Transcription 1": "[miːt]",
+    "Past Simple form": "met",
+    "Transcription 2": "[met]",
+    "Past Participle form": "met",
+    "Transcription 3": "[met]"
+  },
+  {
+    "Translation": "затмить; превзойти",
+    "Base form": "outshine",
+    "Transcription 1": "[aʊt'ʃaɪn]",
+    "Past Simple form": "outshone",
+    "Transcription 2": "[aʊt'ʃɒn]",
+    "Past Participle form": "outshone",
+    "Transcription 3": "[aʊt'ʃɒn]"
+  },
+  {
+    "Translation": "перематывать",
+    "Base form": "rewind",
+    "Transcription 1": "[riː'waɪnd]",
+    "Past Simple form": "rewound",
+    "Transcription 2": "[riː'waʊnd]",
+    "Past Participle form": "rewound",
+    "Transcription 3": "[riː'waʊnd]"
+  },
+  {
+    "Translation": "светить; сиять",
+    "Base form": "shine",
+    "Transcription 1": "[ʃaɪn]",
+    "Past Simple form": "shone",
+    "Transcription 2": "[ʃɒn]",
+    "Past Participle form": "shone",
+    "Transcription 3": "[ʃɒn]"
+  },
+  {
+    "Translation": "ударить; бить; бастовать",
+    "Base form": "strike",
+    "Transcription 1": "[straɪk]",
+    "Past Simple form": "struck",
+    "Transcription 2": "[strʌk]",
+    "Past Participle form": "struck",
+    "Transcription 3": "[strʌk]"
+  },
+  {
+    "Translation": "прясть; крутить, вертеть",
+    "Base form": "spin",
+    "Transcription 1": "[spɪn]",
+    "Past Simple form": "spun",
+    "Transcription 2": "[spʌn]",
+    "Past Participle form": "spun",
+    "Transcription 3": "[spʌn]"
+  },
+  {
+    "Translation": "втыкать; укалывать; приклеивать",
+    "Base form": "stick",
+    "Transcription 1": "[stɪk]",
+    "Past Simple form": "stuck",
+    "Transcription 2": "[stʌk]",
+    "Past Participle form": "stuck",
+    "Transcription 3": "[stʌk]"
+  },
+  {
+    "Translation": "красться",
+    "Base form": "sneak",
+    "Transcription 1": "[sniːk]",
+    "Past Simple form": "snuck",
+    "Transcription 2": "[snʌk]",
+    "Past Participle form": "snuck",
+    "Transcription 3": "[snʌk]"
+  },
+  {
+    "Translation": "качать",
+    "Base form": "swing",
+    "Transcription 1": "[swɪŋ]",
+    "Past Simple form": "swung",
+    "Transcription 2": "[swʌŋ]",
+    "Past Participle form": "swung",
+    "Transcription 3": "[swʌŋ]"
+  },
+  {
+    "Translation": "нанизать; натягивать",
+    "Base form": "string",
+    "Transcription 1": "[strɪŋ]",
+    "Past Simple form": "strung",
+    "Transcription 2": "[strʌŋ]",
+    "Past Participle form": "strung",
+    "Transcription 3": "[strʌŋ]"
+  },
+  {
+    "Translation": "осветить прожектором; сделать центром внимания",
+    "Base form": "spotlight",
+    "Transcription 1": "['spɒtlaɪt]",
+    "Past Simple form": "spotlit",
+    "Transcription 2": "[spɒtlɪt]",
+    "Past Participle form": "spotlit",
+    "Transcription 3": "[spɒtlɪt]"
+  },
+  {
+    "Translation": "скользить",
+    "Base form": "slide",
+    "Transcription 1": "[slaɪd]",
+    "Past Simple form": "slid",
+    "Transcription 2": "[slɪd]",
+    "Past Participle form": "slid",
+    "Transcription 3": "[slɪd]"
+  },
+  {
+    "Translation": "подвешивать",
+    "Base form": "sling",
+    "Transcription 1": "[slɪŋ]",
+    "Past Simple form": "slung",
+    "Transcription 2": "[slʌŋ]",
+    "Past Participle form": "slung",
+    "Transcription 3": "[slʌŋ]"
+  },
+  {
+    "Translation": "жалить",
+    "Base form": "sting",
+    "Transcription 1": "[stɪŋ]",
+    "Past Simple form": "stung",
+    "Transcription 2": "[stʌŋ]",
+    "Past Participle form": "stung",
+    "Transcription 3": "[stʌŋ]"
+  },
+  {
+    "Translation": "ускорять; спешить; мчаться",
+    "Base form": "speed",
+    "Transcription 1": "[spiːd]",
+    "Past Simple form": "sped",
+    "Transcription 2": "[spɛd]",
+    "Past Participle form": "sped",
+    "Transcription 3": "[spɛd]"
+  },
+  {
+    "Translation": "сидеть",
+    "Base form": "sit",
+    "Transcription 1": "[sɪt]",
+    "Past Simple form": "sat",
+    "Transcription 2": "[sæt]",
+    "Past Participle form": "sat",
+    "Transcription 3": "[sæt]"
+  },
+  {
+    "Translation": "работать няней, присматривать за детьми",
+    "Base form": "baby-sit",
+    "Transcription 1": "[ˈbeɪbɪ sɪt]",
+    "Past Simple form": "baby-sat",
+    "Transcription 2": "[ˈbeɪbɪ sæt]",
+    "Past Participle form": "baby-sat",
+    "Transcription 3": "[ˈbeɪbɪ sæt]"
+  },
+  {
+    "Translation": "плевать",
+    "Base form": "spit",
+    "Transcription 1": "[spɪt]",
+    "Past Simple form": "spat",
+    "Transcription 2": "[spæt]",
+    "Past Participle form": "spat",
+    "Transcription 3": "[spæt]"
+  },
+  {
+    "Translation": "стрелять",
+    "Base form": "shoot",
+    "Transcription 1": "[ʃuːt]",
+    "Past Simple form": "shot",
+    "Transcription 2": "[ʃɒt]",
+    "Past Participle form": "shot",
+    "Transcription 3": "[ʃɒt]"
+  },
+  {
+    "Translation": "искать неисправности; разрешать проблемы",
+    "Base form": "troubleshoot",
+    "Transcription 1": "[ˈtrʌblʃuːt]",
+    "Past Simple form": "troubleshot",
+    "Transcription 2": "[ˈtrʌblʃɒt]",
+    "Past Participle form": "troubleshot",
+    "Transcription 3": "[ˈtrʌblʃɒt]"
+  },
+  {
+    "Translation": "стоять",
+    "Base form": "stand",
+    "Transcription 1": "[stænd]",
+    "Past Simple form": "stood",
+    "Transcription 2": "[stuːd]",
+    "Past Participle form": "stood",
+    "Transcription 3": "[stuːd]"
+  },
+  {
+    "Translation": "понимать",
+    "Base form": "understand",
+    "Transcription 1": "[ˌʌndə'stænd]",
+    "Past Simple form": "understood",
+    "Transcription 2": "[ˌʌndə'stʊd]",
+    "Past Participle form": "understood",
+    "Transcription 3": "[ˌʌndə'stʊd]"
+  },
+  {
+    "Translation": "неправильно понимать",
+    "Base form": "misunderstand",
+    "Transcription 1": "[ˌmɪsʌndə'stænd]",
+    "Past Simple form": "misunderstood",
+    "Transcription 2": "[ˌmɪsʌndə'stʊd]",
+    "Past Participle form": "misunderstood",
+    "Transcription 3": "[ˌmɪsʌndə'stʊd]"
+  },
+  {
+    "Translation": "ступать, шагать",
+    "Base form": "tread",
+    "Transcription 1": "[trɛd]",
+    "Past Simple form": "trod",
+    "Transcription 2": "[trɒd]",
+    "Past Participle form": "trod",
+    "Transcription 3": "[trɒd]"
+  },
+  {
+    "Translation": "выиграть; победить",
+    "Base form": "win",
+    "Transcription 1": "[wɪn]",
+    "Past Simple form": "won",
+    "Transcription 2": "[wʌn]",
+    "Past Participle form": "won",
+    "Transcription 3": "[wʌn]"
+  },
+  {
+    "Translation": "наматывать, виться, заводить",
+    "Base form": "wind",
+    "Transcription 1": "[waɪnd]",
+    "Past Simple form": "wound",
+    "Transcription 2": "[waʊnd]",
+    "Past Participle form": "wound",
+    "Transcription 3": "[waʊnd]"
+  },
+  {
+    "Translation": "слышать, услышать",
+    "Base form": "hear",
+    "Transcription 1": "[hɪə]",
+    "Past Simple form": "heard",
+    "Transcription 2": "[hɜːd]",
+    "Past Participle form": "heard",
+    "Transcription 3": "[hɜːd]"
+  },
+  {
+    "Translation": "подслушивать; нечаянно услышать",
+    "Base form": "overhear",
+    "Transcription 1": "[ˌəʊvəˈhɪə]",
+    "Past Simple form": "overheard",
+    "Transcription 2": "[ˌəʊvəˈhɜːd]",
+    "Past Participle form": "overheard",
+    "Transcription 3": "[ˌəʊvəˈhɜːd]"
+  },
+  {
+    "Translation": "рассказывать",
+    "Base form": "tell",
+    "Transcription 1": "[tel]",
+    "Past Simple form": "told",
+    "Transcription 2": "[təʊld]",
+    "Past Participle form": "told",
+    "Transcription 3": "[təʊld]"
+  },
+  {
+    "Translation": "пересказывать",
+    "Base form": "retell",
+    "Transcription 1": "[ˌriːˈtel]",
+    "Past Simple form": "retold",
+    "Transcription 2": "[ˌriːˈtəʊld]",
+    "Past Participle form": "retold",
+    "Transcription 3": "[ˌriːˈtəʊld]"
+  },
+  {
+    "Translation": "предсказывать",
+    "Base form": "foretell",
+    "Transcription 1": "[ˌfɔːˈtel]",
+    "Past Simple form": "foretold",
+    "Transcription 2": "[ˌfɔːˈtəʊld]",
+    "Past Participle form": "foretold",
+    "Transcription 3": "[ˌfɔːˈtəʊld]"
+  },
+  {
+    "Translation": "торговать, продавать",
+    "Base form": "sell",
+    "Transcription 1": "[sel]",
+    "Past Simple form": "sold",
+    "Transcription 2": "[səʊld]",
+    "Past Participle form": "sold",
+    "Transcription 3": "[səʊld]"
+  },
+  {
+    "Translation": "перепродавать",
+    "Base form": "resell",
+    "Transcription 1": "[ˌriːˈsel]",
+    "Past Simple form": "resold",
+    "Transcription 2": "[ˌriːˈsəʊld]",
+    "Past Participle form": "resold",
+    "Transcription 3": "[ˌriːˈsəʊld]"
+  },
+  {
+    "Translation": "обувать; подковывать",
+    "Base form": "shoe",
+    "Transcription 1": "[ʃuː]",
+    "Past Simple form": "shod",
+    "Transcription 2": "[ʃɒd]",
+    "Past Participle form": "shod",
+    "Transcription 3": "[ʃɒd]"
+  },
+  {
+    "Translation": "иметь, обладать",
+    "Base form": "have / has",
+    "Transcription 1": "[hæv] / [hæz]",
+    "Past Simple form": "had",
+    "Transcription 2": "[hæd]",
+    "Past Participle form": "had",
+    "Transcription 3": "[hæd]"
+  },
+  {
+    "Translation": "делать; производить",
+    "Base form": "make",
+    "Transcription 1": "[meɪk]",
+    "Past Simple form": "made",
+    "Transcription 2": "[meɪd]",
+    "Past Participle form": "made",
+    "Transcription 3": "[meɪd]"
+  },
+  {
+    "Translation": "переделывать",
+    "Base form": "remake",
+    "Transcription 1": "[ˌriːˈmeɪk]",
+    "Past Simple form": "remade",
+    "Transcription 2": "[ˌriːˈmeɪd]",
+    "Past Participle form": "remade",
+    "Transcription 3": "[ˌriːˈmeɪd]"
+  },
+  {
+    "Translation": "платить",
+    "Base form": "pay",
+    "Transcription 1": "[peɪ]",
+    "Past Simple form": "paid",
+    "Transcription 2": "[peɪd]",
+    "Past Participle form": "paid",
+    "Transcription 3": "[peɪd]"
+  },
+  {
+    "Translation": "мало платить; недоплачивать",
+    "Base form": "underpay",
+    "Transcription 1": "[ˌʌndəˈpeɪ]",
+    "Past Simple form": "underpaid",
+    "Transcription 2": "[ˌʌndəˈpeɪd]",
+    "Past Participle form": "underpaid",
+    "Transcription 3": "[ˌʌndəˈpeɪd]"
+  },
+  {
+    "Translation": "класть",
+    "Base form": "lay",
+    "Transcription 1": "[leɪ]",
+    "Past Simple form": "laid",
+    "Transcription 2": "[leɪd]",
+    "Past Participle form": "laid",
+    "Transcription 3": "[leɪd]"
+  },
+  {
+    "Translation": "сказать",
+    "Base form": "say",
+    "Transcription 1": "[seɪ]",
+    "Past Simple form": "said",
+    "Transcription 2": "[sed]",
+    "Past Participle form": "said",
+    "Transcription 3": "[sed]"
+  },
+  {
+    "Translation": "умолять; упрашивать",
+    "Base form": "beseech",
+    "Transcription 1": "[bɪˈsiːtʃ]",
+    "Past Simple form": "besought",
+    "Transcription 2": "[bɪˈsɔːt]",
+    "Past Participle form": "besought",
+    "Transcription 3": "[bɪˈsɔːt]"
+  },
+  {
+    "Translation": "купить",
+    "Base form": "buy",
+    "Transcription 1": "[baɪ]",
+    "Past Simple form": "bought",
+    "Transcription 2": "[bɔːt]",
+    "Past Participle form": "bought",
+    "Transcription 3": "[bɔːt]"
+  },
+  {
+    "Translation": "приносить",
+    "Base form": "bring",
+    "Transcription 1": "[brɪŋ]",
+    "Past Simple form": "brought",
+    "Transcription 2": "[brɔːt]",
+    "Past Participle form": "brought",
+    "Transcription 3": "[brɔːt]"
+  },
+  {
+    "Translation": "ловить, хватать",
+    "Base form": "catch",
+    "Transcription 1": "[kætʃ]",
+    "Past Simple form": "caught",
+    "Transcription 2": "[kɔːt]",
+    "Past Participle form": "caught",
+    "Transcription 3": "[kɔːt]"
+  },
+  {
+    "Translation": "терять",
+    "Base form": "lose",
+    "Transcription 1": "[luːz]",
+    "Past Simple form": "lost",
+    "Transcription 2": "[lɒst]",
+    "Past Participle form": "lost",
+    "Transcription 3": "[lɒst]"
+  },
+  {
+    "Translation": "учить, обучать, преподавать",
+    "Base form": "teach",
+    "Transcription 1": "[tiːtʃ]",
+    "Past Simple form": "taught",
+    "Transcription 2": "[tɔːt]",
+    "Past Participle form": "taught",
+    "Transcription 3": "[tɔːt]"
+  },
+  {
+    "Translation": "думать",
+    "Base form": "think",
+    "Transcription 1": "[θɪŋk]",
+    "Past Simple form": "thought",
+    "Transcription 2": "[θɔːt]",
+    "Past Participle form": "thought",
+    "Transcription 3": "[θɔːt]"
+  },
+  {
+    "Translation": "обдумать заново, передумать",
+    "Base form": "rethink",
+    "Transcription 1": "[ˌriːˈθɪŋk]",
+    "Past Simple form": "rethought",
+    "Transcription 2": "[ˌriːˈθɔːt]",
+    "Past Participle form": "rethought",
+    "Transcription 3": "[ˌriːˈθɔːt]"
+  },
+  {
+    "Translation": "искать",
+    "Base form": "seek",
+    "Transcription 1": "[siːk]",
+    "Past Simple form": "sought",
+    "Transcription 2": "[sɔːt]",
+    "Past Participle form": "sought",
+    "Transcription 3": "[sɔːt]"
+  },
+  {
+    "Translation": "ползти, красться, чувствовать мурашки по телу",
+    "Base form": "creep",
+    "Transcription 1": "[kriːp]",
+    "Past Simple form": "crept",
+    "Transcription 2": "[krept]",
+    "Past Participle form": "crept",
+    "Transcription 3": "[krept]"
+  },
+  {
+    "Translation": "иметь дело",
+    "Base form": "deal",
+    "Transcription 1": "[diːl]",
+    "Past Simple form": "dealt",
+    "Transcription 2": "[delt]",
+    "Past Participle form": "dealt",
+    "Transcription 3": "[delt]"
+  },
+  {
+    "Translation": "видеть сны; мечтать",
+    "Base form": "dream",
+    "Transcription 1": "[driːm]",
+    "Past Simple form": "dreamt",
+    "Transcription 2": "[dremt]",
+    "Past Participle form": "dreamt",
+    "Transcription 3": "[dremt]"
+  },
+  {
+    "Translation": "грезить наяву; мечтать, фантазировать",
+    "Base form": "daydream",
+    "Transcription 1": "[ˈdeɪ.driːm]",
+    "Past Simple form": "daydreamt",
+    "Transcription 2": "[ˈdeɪ.dremt]",
+    "Past Participle form": "daydreamt",
+    "Transcription 3": "[ˈdeɪ.dremt]"
+  },
+  {
+    "Translation": "чувствовать",
+    "Base form": "feel",
+    "Transcription 1": "[fiːl]",
+    "Past Simple form": "felt",
+    "Transcription 2": "[felt]",
+    "Past Participle form": "felt",
+    "Transcription 3": "[felt]"
+  },
+  {
+    "Translation": "стоять на коленях, преклонять колени",
+    "Base form": "kneel",
+    "Transcription 1": "[niːl]",
+    "Past Simple form": "knelt",
+    "Transcription 2": "[nelt]",
+    "Past Participle form": "knelt",
+    "Transcription 3": "[nelt]"
+  },
+  {
+    "Translation": "держать; хранить",
+    "Base form": "keep",
+    "Transcription 1": "[kiːp]",
+    "Past Simple form": "kept",
+    "Transcription 2": "[kept]",
+    "Past Participle form": "kept",
+    "Transcription 3": "[kept]"
+  },
+  {
+    "Translation": "прыгать, скакать",
+    "Base form": "leap",
+    "Transcription 1": "[liːp]",
+    "Past Simple form": "leapt",
+    "Transcription 2": "[lept]",
+    "Past Participle form": "leapt",
+    "Transcription 3": "[lept]"
+  },
+  {
+    "Translation": "оставить; уйти",
+    "Base form": "leave",
+    "Transcription 1": "[liːv]",
+    "Past Simple form": "left",
+    "Transcription 2": "[left]",
+    "Past Participle form": "left",
+    "Transcription 3": "[left]"
+  },
+  {
+    "Translation": "опираться; прислоняться",
+    "Base form": "lean",
+    "Transcription 1": "[liːn]",
+    "Past Simple form": "leant",
+    "Transcription 2": "[lent]",
+    "Past Participle form": "leant",
+    "Transcription 3": "[lent]"
+  },
+  {
+    "Translation": "означать; иметь в виду",
+    "Base form": "mean",
+    "Transcription 1": "[miːn]",
+    "Past Simple form": "meant",
+    "Transcription 2": "[ment]",
+    "Past Participle form": "meant",
+    "Transcription 3": "[ment]"
+  },
+  {
+    "Translation": "спать",
+    "Base form": "sleep",
+    "Transcription 1": "[sliːp]",
+    "Past Simple form": "slept",
+    "Transcription 2": "[slept]",
+    "Past Participle form": "slept",
+    "Transcription 3": "[slept]"
+  },
+  {
+    "Translation": "мести метлой",
+    "Base form": "sweep",
+    "Transcription 1": "[swiːp]",
+    "Past Simple form": "swept",
+    "Transcription 2": "[swept]",
+    "Past Participle form": "swept",
+    "Transcription 3": "[swept]"
+  },
+  {
+    "Translation": "плакать, рыдать",
+    "Base form": "weep",
+    "Transcription 1": "[wiːp]",
+    "Past Simple form": "wept",
+    "Transcription 2": "[wept]",
+    "Past Participle form": "wept",
+    "Transcription 3": "[wept]"
+  },
+  {
+    "Translation": "гнуть; наклоняться",
+    "Base form": "bend",
+    "Transcription 1": "[bend]",
+    "Past Simple form": "bent",
+    "Transcription 2": "[bent]",
+    "Past Participle form": "bent",
+    "Transcription 3": "[bent]"
+  },
+  {
+    "Translation": "давать взаймы",
+    "Base form": "lend",
+    "Transcription 1": "[lend]",
+    "Past Simple form": "lent",
+    "Transcription 2": "[lent]",
+    "Past Participle form": "lent",
+    "Transcription 3": "[lent]"
+  },
+  {
+    "Translation": "смешивать",
+    "Base form": "blend",
+    "Transcription 1": "[blend]",
+    "Past Simple form": "blent",
+    "Transcription 2": "[blent]",
+    "Past Participle form": "blent",
+    "Transcription 3": "[blent]"
+  },
+  {
+    "Translation": "строить",
+    "Base form": "build",
+    "Transcription 1": "[bɪld]",
+    "Past Simple form": "built",
+    "Transcription 2": "[bɪlt]",
+    "Past Participle form": "built",
+    "Transcription 3": "[bɪlt]"
+  },
+  {
+    "Translation": "перестроить",
+    "Base form": "rebuild",
+    "Transcription 1": "[ˌriːˈbɪld]",
+    "Past Simple form": "rebuilt",
+    "Transcription 2": "[ˌriːˈbɪlt]",
+    "Past Participle form": "rebuilt",
+    "Transcription 3": "[ˌriːˈbɪlt]"
+  },
+  {
+    "Translation": "тратить; проводить (время)",
+    "Base form": "spend",
+    "Transcription 1": "[spend]",
+    "Past Simple form": "spent",
+    "Transcription 2": "[spent]",
+    "Past Participle form": "spent",
+    "Transcription 3": "[spent]"
+  },
+  {
+    "Translation": "посылать, отправлять",
+    "Base form": "send",
+    "Transcription 1": "[send]",
+    "Past Simple form": "sent",
+    "Transcription 2": "[sent]",
+    "Past Participle form": "sent",
+    "Transcription 3": "[sent]"
+  },
+  {
+    "Translation": "жечь",
+    "Base form": "burn",
+    "Transcription 1": "[bɜːn]",
+    "Past Simple form": "burnt",
+    "Transcription 2": "[bɜːnt]",
+    "Past Participle form": "burnt",
+    "Transcription 3": "[bɜːnt]"
+  },
+  {
+    "Translation": "обгорать на солнце",
+    "Base form": "sunburn",
+    "Transcription 1": "[ˈsʌnbɜːn]",
+    "Past Simple form": "sunburnt",
+    "Transcription 2": "[ˈsʌnbɜːnt]",
+    "Past Participle form": "sunburnt",
+    "Transcription 3": "[ˈsʌnbɜːnt]"
+  },
+  {
+    "Translation": "хлопать в ладоши",
+    "Base form": "clap",
+    "Transcription 1": "[klæp]",
+    "Past Simple form": "clapt",
+    "Transcription 2": "[klæpt]",
+    "Past Participle form": "clapt",
+    "Transcription 3": "[klæpt]"
+  },
+  {
+    "Translation": "обитать",
+    "Base form": "dwell",
+    "Transcription 1": "[dwel]",
+    "Past Simple form": "dwelt",
+    "Transcription 2": "[dwelt]",
+    "Past Participle form": "dwelt",
+    "Transcription 3": "[dwelt]"
+  },
+  {
+    "Translation": "изучать, учить; узнавать",
+    "Base form": "learn",
+    "Transcription 1": "[lɜːn]",
+    "Past Simple form": "learnt",
+    "Transcription 2": "[lɜːnt]",
+    "Past Participle form": "learnt",
+    "Transcription 3": "[lɜːnt]"
+  },
+  {
+    "Translation": "нюхать; пахнуть",
+    "Base form": "smell",
+    "Transcription 1": "[smel]",
+    "Past Simple form": "smelt",
+    "Transcription 2": "[smelt]",
+    "Past Participle form": "smelt",
+    "Transcription 3": "[smelt]"
+  },
+  {
+    "Translation": "произносить по буквам",
+    "Base form": "spell",
+    "Transcription 1": "[spel]",
+    "Past Simple form": "spelt",
+    "Transcription 2": "[spelt]",
+    "Past Participle form": "spelt",
+    "Transcription 3": "[spelt]"
+  },
+  {
+    "Translation": "проливать",
+    "Base form": "spill",
+    "Transcription 1": "[spɪl]",
+    "Past Simple form": "spilt",
+    "Transcription 2": "[spɪlt]",
+    "Past Participle form": "spilt",
+    "Transcription 3": "[spɪlt]"
+  },
+  {
+    "Translation": "портить",
+    "Base form": "spoil",
+    "Transcription 1": "[spɔɪl]",
+    "Past Simple form": "spoilt",
+    "Transcription 2": "[spɔɪlt]",
+    "Past Participle form": "spoilt",
+    "Transcription 3": "[spɔɪlt]"
+  },
+  {
+    "Translation": "заворачивать, окутывать, обертывать",
+    "Base form": "wrap",
+    "Transcription 1": "[ræp]",
+    "Past Simple form": "wrapt",
+    "Transcription 2": "[ræpt]",
+    "Past Participle form": "wrapt",
+    "Transcription 3": "[ræpt]"
+  },
+  {
+    "Translation": "приходить",
+    "Base form": "come",
+    "Transcription 1": "[kʌm]",
+    "Past Simple form": "came",
+    "Transcription 2": "[keɪm]",
+    "Past Participle form": "come",
+    "Transcription 3": "[kʌm]"
+  },
+  {
+    "Translation": "становиться, делаться, превращаться",
+    "Base form": "become",
+    "Transcription 1": "[bɪˈkʌm]",
+    "Past Simple form": "became",
+    "Transcription 2": "[bɪˈkeɪm]",
+    "Past Participle form": "become",
+    "Transcription 3": "[bɪˈkʌm]"
+  },
+  {
+    "Translation": "преодолеть",
+    "Base form": "overcome",
+    "Transcription 1": "[ˌəʊvəˈkʌm]",
+    "Past Simple form": "overcame",
+    "Transcription 2": "[ˌəʊvəˈkeɪm]",
+    "Past Participle form": "overcome",
+    "Transcription 3": "[ˌəʊvəˈkʌm]"
+  },
+  {
+    "Translation": "бежать; течь",
+    "Base form": "run",
+    "Transcription 1": "[rʌn]",
+    "Past Simple form": "ran",
+    "Transcription 2": "[ræn]",
+    "Past Participle form": "run",
+    "Transcription 3": "[rʌn]"
+  },
+  {
+    "Translation": "переливаться через край",
+    "Base form": "overrun",
+    "Transcription 1": "[ˌəʊvəˈrʌn]",
+    "Past Simple form": "overran",
+    "Transcription 2": "[ˌəʊvəˈræn]",
+    "Past Participle form": "overrun",
+    "Transcription 3": "[ˌəʊvəˈrʌn]"
+  },
+  {
+    "Translation": "быть",
+    "Base form": "be",
+    "Transcription 1": "[biː]",
+    "Past Simple form": "was / were",
+    "Transcription 2": "[wɒz] / [wɪə]",
+    "Past Participle form": "been",
+    "Transcription 3": "[biːn]"
+  },
+  {
+    "Translation": "идти",
+    "Base form": "go",
+    "Transcription 1": "[ɡəʊ]",
+    "Past Simple form": "went",
+    "Transcription 2": "[went]",
+    "Past Participle form": "gone",
+    "Transcription 3": "[ɡɒn]"
+  },
+  {
+    "Translation": "бить",
+    "Base form": "beat",
+    "Transcription 1": "[biːt]",
+    "Past Simple form": "beat",
+    "Transcription 2": "[biːt]",
+    "Past Participle form": "beaten",
+    "Transcription 3": "[ˈbiːtn]"
+  },
+  {
+    "Translation": "гравировать",
+    "Base form": "grave",
+    "Transcription 1": "[ɡreɪv]",
+    "Past Simple form": "graved",
+    "Transcription 2": "[ɡreɪvd]",
+    "Past Participle form": "graven",
+    "Transcription 3": "[ˈɡreɪvən]"
+  },
+  {
+    "Translation": "плавить",
+    "Base form": "melt",
+    "Transcription 1": "[melt]",
+    "Past Simple form": "melted",
+    "Transcription 2": "[ˈmeltɪd]",
+    "Past Participle form": "molten",
+    "Transcription 3": "[ˈməʊltən]"
+  },
+  {
+    "Translation": "доказывать; оказаться",
+    "Base form": "prove",
+    "Transcription 1": "[pruːv]",
+    "Past Simple form": "proved",
+    "Transcription 2": "[pruːvd]",
+    "Past Participle form": "proven",
+    "Transcription 3": "[ˈpruːvən]"
+  },
+  {
+    "Translation": "гнить",
+    "Base form": "rot",
+    "Transcription 1": "[rɒt]",
+    "Past Simple form": "rotted",
+    "Transcription 2": "[ˈrɒtɪd]",
+    "Past Participle form": "rotten",
+    "Transcription 3": "[ˈrɒtn]"
+  },
+  {
+    "Translation": "показывать",
+    "Base form": "show",
+    "Transcription 1": "[ʃəʊ]",
+    "Past Simple form": "showed",
+    "Transcription 2": "[ʃəʊd]",
+    "Past Participle form": "shown",
+    "Transcription 3": "[ʃəʊn]"
+  },
+  {
+    "Translation": "шить",
+    "Base form": "sew",
+    "Transcription 1": "[səʊ]",
+    "Past Simple form": "sewed",
+    "Transcription 2": "[səʊd]",
+    "Past Participle form": "sewn",
+    "Transcription 3": "[səʊn]"
+  },
+  {
+    "Translation": "пилить",
+    "Base form": "saw",
+    "Transcription 1": "[sɔː]",
+    "Past Simple form": "sawed",
+    "Transcription 2": "[sɔːd]",
+    "Past Participle form": "sawn",
+    "Transcription 3": "[sɔːn]"
+  },
+  {
+    "Translation": "придавать форму",
+    "Base form": "shape",
+    "Transcription 1": "[ʃeɪp]",
+    "Past Simple form": "shaped",
+    "Transcription 2": "[ʃeɪpt]",
+    "Past Participle form": "shapen",
+    "Transcription 3": "[ˈʃeɪpən]"
+  },
+  {
+    "Translation": "брить",
+    "Base form": "shave",
+    "Transcription 1": "[ʃeɪv]",
+    "Past Simple form": "shaved",
+    "Transcription 2": "[ʃeɪvd]",
+    "Past Participle form": "shaven",
+    "Transcription 3": "[ˈʃeɪvən]"
+  },
+  {
+    "Translation": "дуть",
+    "Base form": "blow",
+    "Transcription 1": "[bləʊ]",
+    "Past Simple form": "blew",
+    "Transcription 2": "[bluː]",
+    "Past Participle form": "blown",
+    "Transcription 3": "[bləʊn]"
+  },
+  {
+    "Translation": "делать",
+    "Base form": "do",
+    "Transcription 1": "[duː]",
+    "Past Simple form": "did",
+    "Transcription 2": "[dɪd]",
+    "Past Participle form": "done",
+    "Transcription 3": "[dʌn]"
+  },
+  {
+    "Translation": "отменить сделанное, открывать",
+    "Base form": "undo",
+    "Transcription 1": "[ʌnˈduː]",
+    "Past Simple form": "undid",
+    "Transcription 2": "[ʌnˈdɪd]",
+    "Past Participle form": "undone",
+    "Transcription 3": "[ʌnˈdʌn]"
+  },
+  {
+    "Translation": "водить машину",
+    "Base form": "drive",
+    "Transcription 1": "[draɪv]",
+    "Past Simple form": "drove",
+    "Transcription 2": "[drəʊv]",
+    "Past Participle form": "driven",
+    "Transcription 3": "[ˈdrɪvn]"
+  },
+  {
+    "Translation": "рисовать, чертить",
+    "Base form": "draw",
+    "Transcription 1": "[drɔː]",
+    "Past Simple form": "drew",
+    "Transcription 2": "[druː]",
+    "Past Participle form": "drawn",
+    "Transcription 3": "[drɔːn]"
+  },
+  {
+    "Translation": "изымать, забирать",
+    "Base form": "withdraw",
+    "Transcription 1": "[wɪðˈdrɔː]",
+    "Past Simple form": "withdrew",
+    "Transcription 2": "[wɪðˈdruː]",
+    "Past Participle form": "withdrawn",
+    "Transcription 3": "[wɪðˈdrɔːn]"
+  },
+  {
+    "Translation": "есть, принимать пищу",
+    "Base form": "eat",
+    "Transcription 1": "[iːt]",
+    "Past Simple form": "ate",
+    "Transcription 2": "[æt]",
+    "Past Participle form": "eaten",
+    "Transcription 3": "[ˈiːtn]"
+  },
+  {
+    "Translation": "запрещать",
+    "Base form": "forbid",
+    "Transcription 1": "[fəˈbɪd]",
+    "Past Simple form": "forbade",
+    "Transcription 2": "[fəˈbeɪd]",
+    "Past Participle form": "forbidden",
+    "Transcription 3": "[fəˈbɪdn]"
+  },
+  {
+    "Translation": "проcщать",
+    "Base form": "forgive",
+    "Transcription 1": "[fəˈɡɪv]",
+    "Past Simple form": "forgave",
+    "Transcription 2": "[fəˈɡeɪv]",
+    "Past Participle form": "forgiven",
+    "Transcription 3": "[fəˈɡɪvn]"
+  },
+  {
+    "Translation": "летать",
+    "Base form": "fly",
+    "Transcription 1": "[flaɪ]",
+    "Past Simple form": "flew",
+    "Transcription 2": "[fluː]",
+    "Past Participle form": "flown",
+    "Transcription 3": "[fləʊn]"
+  },
+  {
+    "Translation": "падать",
+    "Base form": "fall",
+    "Transcription 1": "[fɔːl]",
+    "Past Simple form": "fell",
+    "Transcription 2": "[fel]",
+    "Past Participle form": "fallen",
+    "Transcription 3": "[ˈfɔːlən]"
+  },
+  {
+    "Translation": "расти",
+    "Base form": "grow",
+    "Transcription 1": "[ɡrəʊ]",
+    "Past Simple form": "grew",
+    "Transcription 2": "[ɡruː]",
+    "Past Participle form": "grown",
+    "Transcription 3": "[ɡrəʊn]"
+  },
+  {
+    "Translation": "дать",
+    "Base form": "give",
+    "Transcription 1": "[ɡɪv]",
+    "Past Simple form": "gave",
+    "Transcription 2": "[ɡeɪv]",
+    "Past Participle form": "given",
+    "Transcription 3": "[ˈɡɪvn]"
+  },
+  {
+    "Translation": "знать",
+    "Base form": "know",
+    "Transcription 1": "[nəʊ]",
+    "Past Simple form": "knew",
+    "Transcription 2": "[njuː]",
+    "Past Participle form": "known",
+    "Transcription 3": "[nəʊn]"
+  },
+  {
+    "Translation": "лежать",
+    "Base form": "lie",
+    "Transcription 1": "[laɪ]",
+    "Past Simple form": "lay",
+    "Transcription 2": "[leɪ]",
+    "Past Participle form": "lain (laid)",
+    "Transcription 3": "[leɪn]"
+  },
+  {
+    "Translation": "подниматься, вставать",
+    "Base form": "rise",
+    "Transcription 1": "[raɪz]",
+    "Past Simple form": "rose",
+    "Transcription 2": "[rəʊz]",
+    "Past Participle form": "risen",
+    "Transcription 3": "[ˈrɪzn]"
+  },
+  {
+    "Translation": "ездить верхом",
+    "Base form": "ride",
+    "Transcription 1": "[raɪd]",
+    "Past Simple form": "rode",
+    "Transcription 2": "[rəʊd]",
+    "Past Participle form": "ridden",
+    "Transcription 3": "[ˈrɪdn]"
+  },
+  {
+    "Translation": "убивать",
+    "Base form": "slay",
+    "Transcription 1": "[sleɪ]",
+    "Past Simple form": "slew",
+    "Transcription 2": "[sluː]",
+    "Past Participle form": "slain",
+    "Transcription 3": "[sleɪn]"
+  },
+  {
+    "Translation": "трясти",
+    "Base form": "shake",
+    "Transcription 1": "[ʃeɪk]",
+    "Past Simple form": "shook",
+    "Transcription 2": "[ʃʊk]",
+    "Past Participle form": "shaken",
+    "Transcription 3": "[ˈʃeɪkən]"
+  },
+  {
+    "Translation": "смотреть, видеть",
+    "Base form": "see",
+    "Transcription 1": "[siː]",
+    "Past Simple form": "saw",
+    "Transcription 2": "[sɔː]",
+    "Past Participle form": "seen",
+    "Transcription 3": "[siːn]"
+  },
+  {
+    "Translation": "предвидеть",
+    "Base form": "foresee",
+    "Transcription 1": "[fɔːˈsiː]",
+    "Past Simple form": "foresaw",
+    "Transcription 2": "[fɔːˈsɔː]",
+    "Past Participle form": "foreseen",
+    "Transcription 3": "[fɔːˈsiːn]"
+  },
+  {
+    "Translation": "бросать, кидать",
+    "Base form": "throw",
+    "Transcription 1": "[θrəʊ]",
+    "Past Simple form": "threw",
+    "Transcription 2": "[θruː]",
+    "Past Participle form": "thrown",
+    "Transcription 3": "[θrəʊn]"
+  },
+  {
+    "Translation": "брать",
+    "Base form": "take",
+    "Transcription 1": "[teɪk]",
+    "Past Simple form": "took",
+    "Transcription 2": "[tʊk]",
+    "Past Participle form": "taken",
+    "Transcription 3": "[ˈteɪkən]"
+  },
+  {
+    "Translation": "ошибаться",
+    "Base form": "mistake",
+    "Transcription 1": "[mɪˈsteɪk]",
+    "Past Simple form": "mistook",
+    "Transcription 2": "[mɪsˈtʊk]",
+    "Past Participle form": "mistaken",
+    "Transcription 3": "[mɪˈsteɪkən]"
+  },
+  {
+    "Translation": "предпринимать",
+    "Base form": "undertake",
+    "Transcription 1": "[ˌʌndəˈteɪk]",
+    "Past Simple form": "undertook",
+    "Transcription 2": "[ˌʌndəˈtʊk]",
+    "Past Participle form": "undertaken",
+    "Transcription 3": "[ˌʌndəˈteɪkən]"
+  },
+  {
+    "Translation": "писать",
+    "Base form": "write",
+    "Transcription 1": "[raɪt]",
+    "Past Simple form": "wrote",
+    "Transcription 2": "[rəʊt]",
+    "Past Participle form": "written",
+    "Transcription 3": "[ˈrɪtn]"
+  },
+  {
+    "Translation": "переписать",
+    "Base form": "rewrite",
+    "Transcription 1": "[ˌriːˈraɪt]",
+    "Past Simple form": "rewrote",
+    "Transcription 2": "[ˌriːˈrəʊt]",
+    "Past Participle form": "rewritten",
+    "Transcription 3": "[ˌriːˈrɪtn]"
+  },
+  {
+    "Translation": "родить, вынести",
+    "Base form": "bear",
+    "Transcription 1": "[beə]",
+    "Past Simple form": "bore",
+    "Transcription 2": "[bɔː]",
+    "Past Participle form": "born",
+    "Transcription 3": "[bɔːn]"
+  },
+  {
+    "Translation": "кусать",
+    "Base form": "bite",
+    "Transcription 1": "[baɪt]",
+    "Past Simple form": "bit",
+    "Transcription 2": "[bɪt]",
+    "Past Participle form": "bitten",
+    "Transcription 3": "[ˈbɪtn]"
+  },
+  {
+    "Translation": "ломать; разбивать",
+    "Base form": "break",
+    "Transcription 1": "[breɪk]",
+    "Past Simple form": "broke",
+    "Transcription 2": "[brəʊk]",
+    "Past Participle form": "broken",
+    "Transcription 3": "[ˈbrəʊkən]"
+  },
+  {
+    "Translation": "выбирать",
+    "Base form": "choose",
+    "Transcription 1": "[tʃuːz]",
+    "Past Simple form": "chose",
+    "Transcription 2": "[tʃəʊz]",
+    "Past Participle form": "chosen",
+    "Transcription 3": "[ˈtʃəʊzn]"
+  },
+  {
+    "Translation": "замерзать; замораживать",
+    "Base form": "freeze",
+    "Transcription 1": "[friːz]",
+    "Past Simple form": "froze",
+    "Transcription 2": "[frəʊz]",
+    "Past Participle form": "frozen",
+    "Transcription 3": "[ˈfrəʊzn]"
+  },
+  {
+    "Translation": "забывать",
+    "Base form": "forget",
+    "Transcription 1": "[fəˈɡet]",
+    "Past Simple form": "forgot",
+    "Transcription 2": "[fəˈɡɒt]",
+    "Past Participle form": "forgotten",
+    "Transcription 3": "[fəˈɡɒtn]"
+  },
+  {
+    "Translation": "прятать, скрывать",
+    "Base form": "hide",
+    "Transcription 1": "[haɪd]",
+    "Past Simple form": "hid",
+    "Transcription 2": "[hɪd]",
+    "Past Participle form": "hidden",
+    "Transcription 3": "[ˈhɪdn]"
+  },
+  {
+    "Translation": "говорить",
+    "Base form": "speak",
+    "Transcription 1": "[spiːk]",
+    "Past Simple form": "spoke",
+    "Transcription 2": "[spəʊk]",
+    "Past Participle form": "spoken",
+    "Transcription 3": "[ˈspəʊkən]"
+  },
+  {
+    "Translation": "красть; воровать",
+    "Base form": "steal",
+    "Transcription 1": "[stiːl]",
+    "Past Simple form": "stole",
+    "Transcription 2": "[stəʊl]",
+    "Past Participle form": "stolen",
+    "Transcription 3": "[ˈstəʊlən]"
+  },
+  {
+    "Translation": "клясться; ругаться",
+    "Base form": "swear",
+    "Transcription 1": "[sweə]",
+    "Past Simple form": "swore",
+    "Transcription 2": "[swɔː]",
+    "Past Participle form": "sworn",
+    "Transcription 3": "[swɔːn]"
+  },
+  {
+    "Translation": "рвать, разрывать",
+    "Base form": "tear",
+    "Transcription 1": "[teə]",
+    "Past Simple form": "tore",
+    "Transcription 2": "[tɔː]",
+    "Past Participle form": "torn",
+    "Transcription 3": "[tɔːn]"
+  },
+  {
+    "Translation": "носить одежду",
+    "Base form": "wear",
+    "Transcription 1": "[weə]",
+    "Past Simple form": "wore",
+    "Transcription 2": "[wɔː]",
+    "Past Participle form": "worn",
+    "Transcription 3": "[wɔːn]"
+  },
+  {
+    "Translation": "просыпаться; будить",
+    "Base form": "wake",
+    "Transcription 1": "[weɪk]",
+    "Past Simple form": "woke",
+    "Transcription 2": "[wəʊk]",
+    "Past Participle form": "woken",
+    "Transcription 3": "[ˈwəʊkən]"
+  },
+  {
+    "Translation": "будить; просыпаться",
+    "Base form": "awake",
+    "Transcription 1": "[əˈweɪk]",
+    "Past Simple form": "awoke",
+    "Transcription 2": "[əˈwəʊk]",
+    "Past Participle form": "awoken",
+    "Transcription 3": "[əˈwəʊkən]"
+  }
+]

@@ -8,22 +8,34 @@
 </head>
 <body>
 
-    <div class="container">
-        <div id="start-screen" class="screen">
+    <div class="settings-bar" role="region" aria-label="Панель настроек">
+        <div class="settings-row settings-header">
             <h1>Проверка глаголов</h1>
-            <p>Всего слов в базе: <span id="total-words-count">0</span></p>
-            
-            <div class="form-group">
-                <label for="word-count">Сколько слов проверить?</label>
-                <input type="number" id="word-count" value="10" min="1">
-            </div>
-
-            <button id="start-btn" class="primary-btn">Начать тест</button>
+            <span class="total-counter">Всего слов: <strong id="total-words-count">0</strong></span>
         </div>
 
-        <div id="game-screen" class="screen hidden">
+        <div class="settings-row settings-controls">
+            <label for="word-list">Список слов:</label>
+            <select id="word-list">
+                <option value="default">100 неправильных глаголов</option>
+                <option value="extended">200 неправильных глаголов</option>
+            </select>
+
+            <label for="word-count">Количество слов:</label>
+            <div class="settings-input-group">
+                <input type="number" id="word-count" value="10" min="1">
+                <button id="start-btn" class="primary-btn">Начать</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container hidden" id="main-content">
+        <div id="game-screen" class="screen">
             <button type="button" class="close-card-btn" id="stop-btn" aria-label="Завершить тренировку">✕</button>
-            <div class="progress">Слово <span id="current-step">1</span> из <span id="total-step">10</span></div>
+            <div class="progress">
+                <button type="button" class="progress-restart-btn" id="progress-restart-btn" aria-label="Начать заново">⟳</button>
+                <span class="progress-text">Слово <span id="current-step">1</span> из <span id="total-step">10</span></span>
+            </div>
             
             <div class="card">
                 <div class="verb-translation" id="verb-translation">Translation</div>

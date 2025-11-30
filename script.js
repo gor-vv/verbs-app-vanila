@@ -4,16 +4,22 @@ let currentIndex = 0;
 let score = 0;
 
 // Ссылки на DOM элементы
+const WORD_LISTS = {
+    default: { file: 'verbs100.json' },
+    extended: { file: 'verbs200.json' }
+};
+
 const dom = {
+    container: document.getElementById('main-content'),
     screens: {
-        start: document.getElementById('start-screen'),
         game: document.getElementById('game-screen'),
         result: document.getElementById('result-screen')
     },
-    start: {
+    controls: {
         totalCount: document.getElementById('total-words-count'),
         countInput: document.getElementById('word-count'),
-        btn: document.getElementById('start-btn')
+        btn: document.getElementById('start-btn'),
+        listSelect: document.getElementById('word-list')
     },
     game: {
         step: document.getElementById('current-step'),
@@ -34,7 +40,8 @@ const dom = {
         ppAudioBtn: document.getElementById('pp-audio-btn'),
         transPp: document.getElementById('trans-pp'),
         nextBtn: document.getElementById('next-btn'),
-        stopBtn: document.getElementById('stop-btn')
+        stopBtn: document.getElementById('stop-btn'),
+        restartBtn: document.getElementById('progress-restart-btn')
     },
     result: {
         score: document.getElementById('final-score'),
@@ -43,6 +50,26 @@ const dom = {
         restartBtn: document.getElementById('restart-btn')
     }
 };
+
+function loadWordList(key = 'default') {
+    const list = WORD_LISTS[key] || WORD_LISTS.default;
+    dom.controls.btn.disabled = true;
+
+    return fetch(list.file)
+        .then(response => response.json())
+        .then(data => {
+            allVerbs = data;
+            dom.controls.totalCount.textContent = allVerbs.length;
+            dom.controls.countInput.max = allVerbs.length;
+            if (parseInt(dom.controls.countInput.value, 10) > allVerbs.length) {
+                dom.controls.countInput.value = allVerbs.length;
+            }
+        })
+        .catch(err => alert(`Ошибка загрузки ${list.file}: ${err}`))
+        .finally(() => {
+            dom.controls.btn.disabled = false;
+        });
+}
 
 function setAudioData(verb) {
     dom.game.baseAudioBtn.dataset.text = verb["Base form"] || '';
@@ -65,22 +92,19 @@ function speakVerb(text) {
     window.speechSynthesis.speak(utterance);
 }
 
-// 1. Инициализация: Загрузка JSON
-fetch('verbs.json')
-    .then(response => response.json())
-    .then(data => {
-        allVerbs = data;
-        dom.start.totalCount.textContent = allVerbs.length;
-        dom.start.countInput.max = allVerbs.length;
-    })
-    .catch(err => alert('Ошибка загрузки verbs.json: ' + err));
+// 1. Инициализация: Загрузка выбранного списка
+loadWordList(dom.controls.listSelect.value);
 
 // События
-dom.start.btn.addEventListener('click', startGame);
+dom.controls.btn.addEventListener('click', startGame);
 dom.game.checkBtn.addEventListener('click', checkAnswer);
 dom.game.nextBtn.addEventListener('click', nextCard);
 dom.result.restartBtn.addEventListener('click', () => location.reload());
 dom.game.stopBtn.addEventListener('click', finishEarly);
+dom.game.restartBtn.addEventListener('click', restartGame);
+dom.controls.listSelect.addEventListener('change', (e) => {
+    loadWordList(e.target.value);
+});
 
 dom.game.baseAudioBtn.addEventListener('click', () => speakVerb(dom.game.baseAudioBtn.dataset.text));
 dom.game.psAudioBtn.addEventListener('click', () => speakVerb(dom.game.psAudioBtn.dataset.text));
@@ -101,8 +125,10 @@ dom.game.input.addEventListener('keypress', function (e) {
 // --- ЛОГИКА ---
 
 function startGame() {
-    const count = parseInt(dom.start.countInput.value);
+    const count = parseInt(dom.controls.countInput.value);
     if (!count || count <= 0) return;
+
+    showMainContent();
 
     // Перемешиваем и берем N слов
     gameVerbs = shuffleArray([...allVerbs]).slice(0, count);
@@ -191,6 +217,21 @@ function nextCard() {
 function finishEarly() {
     if (!gameVerbs.length) return;
     endGame();
+}
+
+function showMainContent() {
+    if (dom.container) {
+        dom.container.classList.remove('hidden');
+    }
+}
+
+function restartGame() {
+    if (!allVerbs.length) return;
+    dom.game.input.value = '';
+    dom.game.feedback.classList.add('hidden');
+    dom.game.checkBtn.classList.remove('hidden');
+    dom.game.input.disabled = false;
+    startGame();
 }
 
 function endGame() {

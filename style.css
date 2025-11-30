@@ -12,10 +12,13 @@ body {
     background-color: var(--bg);
     color: var(--text);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     min-height: 100vh;
     margin: 0;
+    padding: 2rem 1rem;
+    gap: 1.5rem;
 }
 
 .container {
@@ -28,12 +31,101 @@ body {
     text-align: center;
 }
 
+.settings-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    width: 100%;
+    max-width: 500px;
+}
+
+.settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.settings-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.settings-header .total-counter {
+    font-size: 0.95rem;
+    color: #7f8c8d;
+}
+
+.settings-controls {
+    flex-wrap: wrap;
+}
+
+.settings-controls label {
+    font-weight: 600;
+}
+
+.settings-controls select {
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #dcdfe3;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    background: #f9fbfd;
+}
+
+.settings-input-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.settings-input-group input {
+    width: 90px;
+    margin: 0;
+}
+
+.settings-input-group .primary-btn {
+    width: auto;
+    margin-top: 0;
+    white-space: nowrap;
+}
+
 .screen { position: relative; }
 
 .hidden { display: none !important; }
 
 /* Typography */
 h1, h2 { margin-bottom: 1rem; color: var(--primary); }
+
+.progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.progress-text { flex: 1; text-align: center; font-weight: 600; }
+
+.progress-restart-btn {
+    border: none;
+    background: rgba(74, 144, 226, 0.12);
+    color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1;
+    padding: 0.35rem 0.55rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.progress-restart-btn:hover {
+    transform: scale(1.08);
+    background: rgba(74, 144, 226, 0.22);
+}
 
 .card { position: relative; padding-top: 1.5rem; }
 .verb-translation { font-size: 1.1rem; color: #7f8c8d; margin-bottom: 0.5rem; }
