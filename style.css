@@ -198,6 +198,19 @@ body {
     gap: 1rem;
 }
 
+.settings-lang {
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.settings-lang select {
+    min-width: 180px;
+    padding: 0.4rem 0.75rem;
+    border: 1px solid #dcdfe3;
+    border-radius: 8px;
+    background: #f9fbfd;
+}
+
 .settings-header h1 {
     margin: 0;
     font-size: 1.5rem;
@@ -291,6 +304,20 @@ h1, h2 { margin-bottom: 1rem; color: var(--primary); }
 .progress-restart-btn:hover {
     transform: scale(1.08);
     background: rgba(74, 144, 226, 0.22);
+}
+
+.progress-stop-btn {
+    border: none;
+    background: transparent;
+    color: var(--error);
+    font-size: 1.4rem;
+    line-height: 1;
+    padding: 0.2rem;
+    cursor: pointer;
+}
+
+.progress-stop-btn:hover {
+    color: #c0392b;
 }
 
 .card { position: relative; padding-top: 1.5rem; }

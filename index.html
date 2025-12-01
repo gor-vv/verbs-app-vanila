@@ -9,7 +9,7 @@
 <body>
 
     <div class="menu-wrapper">
-        <button type="button" class="menu-btn" id="menu-btn" aria-haspopup="true" aria-expanded="false">
+        <button type="button" class="menu-btn" id=smenu-btn" aria-haspopup="true" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
@@ -28,7 +28,19 @@
                 <option value="default">100 неправильных глаголов</option>
                 <option value="extended">200 неправильных глаголов</option>
             </select>
+        </div>
 
+        <div class="settings-row settings-lang">
+            <label for="speech-lang">Язык озвучки:</label>
+            <select id="speech-lang">
+                <option value="en-US">English (US)</option>
+                <option value="en-GB">English (UK)</option>
+                <option value="en-AU">English (AU)</option>
+                <option value="ru-RU">Русский</option>
+            </select>
+        </div>
+
+        <div class="settings-row settings-controls">
             <label for="word-count">Сколько слов проверить:</label>
             <div class="settings-input-group">
                 <input type="number" id="word-count" value="10" min="1">
@@ -44,10 +56,10 @@
 
     <div class="container hidden" id="main-content">
         <div id="game-screen" class="screen">
-            <button type="button" class="close-card-btn" id="stop-btn" aria-label="Завершить тренировку">✕</button>
             <div class="progress">
                 <button type="button" class="progress-restart-btn" id="progress-restart-btn" aria-label="Начать заново">⟳</button>
                 <span class="progress-text">Слово <span id="current-step">1</span> из <span id="total-step">10</span></span>
+                <button type="button" class="progress-stop-btn" id="stop-btn" aria-label="Завершить тренировку">✕</button>
             </div>
             
             <div class="card">

@@ -2,14 +2,115 @@ let allVerbs = [];
 let gameVerbs = [];
 let currentIndex = 0;
 let score = 0;
+let currentSpeechLang = 'en-US';
 
 const STORAGE_KEY = 'irregularTrainer:results';
 
 // Ссылки на DOM элементы
 const WORD_LISTS = {
-    default: { file: 'verbs100.json' },
-    extended: { file: 'verbs200.json' }
+    default: { file: 'resource/verbs100.json' },
+    extended: { file: 'resource/verbs200.json' }
 };
+
+const dom = {
+    container: document.getElementById('main-content'),
+    screens: {
+        game: document.getElementById('game-screen'),
+        result: document.getElementById('result-screen')
+    },
+    controls: {
+        totalCount: document.getElementById('total-words-count'),
+        countInput: document.getElementById('word-count'),
+        btn: document.getElementById('start-btn'),
+        listSelect: document.getElementById('word-list'),
+        maxBtn: document.getElementById('max-btn'),
+        speechSelect: document.getElementById('speech-lang')
+    },
+    history: {
+        toggle: document.getElementById('menu-history'),
+        modal: document.getElementById('history-modal'),
+        close: document.getElementById('history-close'),
+        backdrop: document.getElementById('history-backdrop'),
+        dialog: document.querySelector('.history-dialog'),
+        list: document.getElementById('history-list'),
+        clearBtn: document.getElementById('history-clear')
+    },
+    menu: {
+        btn: document.getElementById('menu-btn'),
+        dropdown: document.getElementById('menu-dropdown')
+    },
+    game: {
+        step: document.getElementById('current-step'),
+        total: document.getElementById('total-step'),
+        translation: document.getElementById('verb-translation'),
+        base: document.getElementById('verb-base'),
+        baseAudioBtn: document.getElementById('base-audio-btn'),
+        transcription1: document.getElementById('verb-transcription-1'),
+        input: document.getElementById('user-input'),
+        checkBtn: document.getElementById('check-btn'),
+        
+        feedback: document.getElementById('feedback'),
+        message: document.getElementById('feedback-message'),
+        correctPs: document.getElementById('correct-ps'),
+        psAudioBtn: document.getElementById('ps-audio-btn'),
+        transPs: document.getElementById('trans-ps'),
+        correctPp: document.getElementById('correct-pp'),
+        ppAudioBtn: document.getElementById('pp-audio-btn'),
+        transPp: document.getElementById('trans-pp'),
+        nextBtn: document.getElementById('next-btn'),
+        stopBtn: document.getElementById('stop-btn'),
+        restartBtn: document.getElementById('progress-restart-btn')
+    },
+    result: {
+        score: document.getElementById('final-score'),
+        total: document.getElementById('final-total'),
+        msg: document.getElementById('final-msg'),
+        restartBtn: document.getElementById('restart-btn')
+    }
+};
+
+// 1. Инициализация: Загрузка выбранного списка
+loadWordList(dom.controls.listSelect.value);
+renderHistoryList();
+
+// События
+dom.controls.btn.addEventListener('click', startGame);
+dom.game.checkBtn.addEventListener('click', checkAnswer);
+dom.game.nextBtn.addEventListener('click', nextCard);
+dom.result.restartBtn.addEventListener('click', () => location.reload());
+dom.game.stopBtn.addEventListener('click', finishEarly);
+dom.game.restartBtn.addEventListener('click', restartGame);
+dom.controls.listSelect.addEventListener('change', (e) => {
+    loadWordList(e.target.value);
+});
+dom.controls.maxBtn.addEventListener('click', () => {
+    if (!allVerbs.length) return;
+    dom.controls.countInput.value = allVerbs.length;
+});
+if (dom.controls.speechSelect) {
+    currentSpeechLang = dom.controls.speechSelect.value || currentSpeechLang;
+    dom.controls.speechSelect.addEventListener('change', (e) => {
+        currentSpeechLang = e.target.value || currentSpeechLang;
+    });
+}
+setupMenu();
+setupHistoryModal();
+
+dom.game.baseAudioBtn.addEventListener('click', () => speakVerb(dom.game.baseAudioBtn.dataset.text));
+dom.game.psAudioBtn.addEventListener('click', () => speakVerb(dom.game.psAudioBtn.dataset.text));
+dom.game.ppAudioBtn.addEventListener('click', () => speakVerb(dom.game.ppAudioBtn.dataset.text));
+
+// Обработка Enter в поле ввода
+dom.game.input.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        // Если кнопка "Дальше" видна, Enter нажимает её, иначе нажимает "Проверить"
+        if (!dom.game.feedback.classList.contains('hidden')) {
+            nextCard();
+        } else {
+            checkAnswer();
+        }
+    }
+});
 
 function clearHistory() {
     localStorage.removeItem(STORAGE_KEY);
@@ -141,62 +242,6 @@ function setupHistoryModal() {
     });
 }
 
-const dom = {
-    container: document.getElementById('main-content'),
-    screens: {
-        game: document.getElementById('game-screen'),
-        result: document.getElementById('result-screen')
-    },
-    controls: {
-        totalCount: document.getElementById('total-words-count'),
-        countInput: document.getElementById('word-count'),
-        btn: document.getElementById('start-btn'),
-        listSelect: document.getElementById('word-list'),
-        maxBtn: document.getElementById('max-btn')
-    },
-    history: {
-        toggle: document.getElementById('menu-history'),
-        modal: document.getElementById('history-modal'),
-        close: document.getElementById('history-close'),
-        backdrop: document.getElementById('history-backdrop'),
-        dialog: document.querySelector('.history-dialog'),
-        list: document.getElementById('history-list'),
-        clearBtn: document.getElementById('history-clear')
-    },
-    menu: {
-        btn: document.getElementById('menu-btn'),
-        dropdown: document.getElementById('menu-dropdown')
-    },
-    game: {
-        step: document.getElementById('current-step'),
-        total: document.getElementById('total-step'),
-        translation: document.getElementById('verb-translation'),
-        base: document.getElementById('verb-base'),
-        baseAudioBtn: document.getElementById('base-audio-btn'),
-        transcription1: document.getElementById('verb-transcription-1'),
-        input: document.getElementById('user-input'),
-        checkBtn: document.getElementById('check-btn'),
-        
-        feedback: document.getElementById('feedback'),
-        message: document.getElementById('feedback-message'),
-        correctPs: document.getElementById('correct-ps'),
-        psAudioBtn: document.getElementById('ps-audio-btn'),
-        transPs: document.getElementById('trans-ps'),
-        correctPp: document.getElementById('correct-pp'),
-        ppAudioBtn: document.getElementById('pp-audio-btn'),
-        transPp: document.getElementById('trans-pp'),
-        nextBtn: document.getElementById('next-btn'),
-        stopBtn: document.getElementById('stop-btn'),
-        restartBtn: document.getElementById('progress-restart-btn')
-    },
-    result: {
-        score: document.getElementById('final-score'),
-        total: document.getElementById('final-total'),
-        msg: document.getElementById('final-msg'),
-        restartBtn: document.getElementById('restart-btn')
-    }
-};
-
 function loadWordList(key = 'default') {
     const list = WORD_LISTS[key] || WORD_LISTS.default;
     dom.controls.btn.disabled = true;
@@ -234,46 +279,9 @@ function speakVerb(text) {
 
     window.speechSynthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(cleaned);
-    utterance.lang = 'en-US';
+    utterance.lang = currentSpeechLang;
     window.speechSynthesis.speak(utterance);
 }
-
-// 1. Инициализация: Загрузка выбранного списка
-loadWordList(dom.controls.listSelect.value);
-renderHistoryList();
-
-// События
-dom.controls.btn.addEventListener('click', startGame);
-dom.game.checkBtn.addEventListener('click', checkAnswer);
-dom.game.nextBtn.addEventListener('click', nextCard);
-dom.result.restartBtn.addEventListener('click', () => location.reload());
-dom.game.stopBtn.addEventListener('click', finishEarly);
-dom.game.restartBtn.addEventListener('click', restartGame);
-dom.controls.listSelect.addEventListener('change', (e) => {
-    loadWordList(e.target.value);
-});
-dom.controls.maxBtn.addEventListener('click', () => {
-    if (!allVerbs.length) return;
-    dom.controls.countInput.value = allVerbs.length;
-});
-setupMenu();
-setupHistoryModal();
-
-dom.game.baseAudioBtn.addEventListener('click', () => speakVerb(dom.game.baseAudioBtn.dataset.text));
-dom.game.psAudioBtn.addEventListener('click', () => speakVerb(dom.game.psAudioBtn.dataset.text));
-dom.game.ppAudioBtn.addEventListener('click', () => speakVerb(dom.game.ppAudioBtn.dataset.text));
-
-// Обработка Enter в поле ввода
-dom.game.input.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        // Если кнопка "Дальше" видна, Enter нажимает её, иначе нажимает "Проверить"
-        if (!dom.game.feedback.classList.contains('hidden')) {
-            nextCard();
-        } else {
-            checkAnswer();
-        }
-    }
-});
 
 // --- ЛОГИКА ---
 
