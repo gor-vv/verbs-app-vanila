@@ -21,18 +21,15 @@
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.9);
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    gap: 5px;
-    padding: 0.4rem;
+    padding: 0.2rem;
+    color: #2c3e50;
 }
 
-.menu-btn span {
-    display: block;
-    height: 2px;
-    width: 100%;
-    background: #2c3e50;
-    border-radius: 999px;
+.menu-btn .material-icons-round {
+    font-size: 24px;
+    line-height: 1;
 }
 
 .menu-dropdown {
@@ -167,6 +164,14 @@ body {
     font-size: 2rem;
     color: var(--primary);
     text-align: center;
+}
+
+@media (max-width: 600px) {
+    .page-title {
+        padding-left: 3.5rem;
+        padding-right: 0.5rem;
+        text-align: center;
+    }
 }
 
 .container {
@@ -328,7 +333,7 @@ h1, h2 { margin-bottom: 1rem; color: var(--primary); }
 
 .correct-answer-block {
     display: grid;
-    grid-template-columns: 150px 180px 40px 1fr;
+    grid-template-columns: minmax(110px, 26%) minmax(130px, 1fr) 40px minmax(110px, 1fr);
     column-gap: 0.5rem;
     row-gap: 0.4rem;
     align-items: center;
@@ -341,6 +346,7 @@ h1, h2 { margin-bottom: 1rem; color: var(--primary); }
 
 .answer-row {
     display: contents;
+    min-width: 0;
 }
 
 .answer-row .label {
@@ -350,6 +356,10 @@ h1, h2 { margin-bottom: 1rem; color: var(--primary); }
 
 .answer-row .val {
     font-weight: 600;
+    min-width: 0;
+    word-break: break-word;
+    justify-self: center;
+    text-align: center;
 }
 
 .answer-row .audio-btn {
@@ -359,6 +369,8 @@ h1, h2 { margin-bottom: 1rem; color: var(--primary); }
 .answer-row .trans {
     font-family: monospace;
     color: #777;
+    min-width: 0;
+    word-break: break-word;
 }
 
 
@@ -402,7 +414,9 @@ input[type="number"], input[type="text"] {
     font-size: 1.1rem;
     border: 2px solid #ddd;
     border-radius: 8px;
-    width: 80%;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
     text-align: center;
     outline: none;
 }
@@ -431,8 +445,102 @@ button:active { transform: scale(0.98); }
 
 /* Results */
 .score-circle {
-    font-size: 3rem;
-    font-weight: bold;
-    color: var(--primary);
-    margin: 20px 0;
+font-size: 3rem;
+font-weight: bold;
+color: var(--primary);
+margin: 20px 0;
+}
+
+@media (max-width: 600px) {
+body {
+padding: 1.25rem 0.75rem;
+}
+
+.menu-wrapper {
+top: 0.5rem;
+left: 0.5rem;
+}
+
+.settings-bar {
+padding: 0.9rem 1rem;
+gap: 0.75rem;
+}
+
+.settings-row {
+flex-direction: column;
+align-items: flex-start;
+gap: 0.5rem;
+}
+
+.settings-lang,
+.settings-controls,
+.settings-footer {
+width: 100%;
+}
+
+.settings-lang,
+.settings-controls {
+justify-content: flex-start;
+}
+
+.settings-lang select,
+.settings-controls select,
+.settings-input-group,
+.settings-input-group input,
+.settings-input-group button,
+.max-btn,
+.primary-btn {
+width: 100%;
+}
+
+.container {
+padding: 1.25rem 1rem;
+}
+
+.progress {
+width: 100%;
+flex-wrap: nowrap;
+gap: 0.35rem;
+justify-content: space-between;
+}
+
+.progress-restart-btn {
+order: 1;
+}
+
+.progress-text {
+order: 2;
+flex: 1;
+text-align: center;
+}
+
+.progress-stop-btn {
+order: 3;
+margin-left: auto;
+}
+
+.card {
+padding: 1rem 0.5rem 0;
+}
+
+.verb-infinitive {
+font-size: 2rem;
+}
+
+.instruction {
+font-size: 0.95rem;
+}
+
+input[type="text"] {
+font-size: 1rem;
+}
+
+.history-dialog {
+max-width: 90vw;
+width: 90vw;
+}
+
+.history-dialog-body {
+max-height: 50vh;
+}
 }
